@@ -1,20 +1,23 @@
 <template>
   <div id="app">
+    <Toolbar />
     <img
       alt="Vue logo"
       src="assets/logo.png"
     >
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <IndexPage msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/IndexPage.vue'
+import IndexPage from './pages/IndexPage/IndexPage.vue'
+import Toolbar from './components/Toolbar/Toolbar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    IndexPage: IndexPage,
+    Toolbar: Toolbar
   }
 }
 </script>
