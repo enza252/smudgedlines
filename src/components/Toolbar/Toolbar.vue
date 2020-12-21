@@ -1,38 +1,32 @@
 <template>
-  <div>
-    <md-toolbar>
+  <div class="md-layout md-gutter md-alignment-center">
+    <md-toolbar class="md-layout-item md-large-size-100 md-primary">
       <h3
         class="md-title"
         style="flex: 1"
       >
         Title
       </h3>
-      <md-button class="md-icon-button">
+      <md-button class="md-icon-button md-layout-item">
         <md-icon>more_vert</md-icon>
-      </md-button>
-    </md-toolbar>
-
-    <md-toolbar
-      class="md-accent"
-      md-elevation="1"
-    >
-      <h3
-        class="md-title"
-        style="flex: 1"
-      >
-        Title
-      </h3>
-      <md-button>Refresh</md-button>
-      <md-button class="md-primary">
-        Create
       </md-button>
     </md-toolbar>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.md-toolbar + .md-toolbar {
-  margin-top: 16px;
+.md-layout-item {
+  height: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+  &:after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: md-get-palette-color(purple, 200);
+    content: " ";
+  }
 }
 </style>
 

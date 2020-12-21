@@ -1,29 +1,43 @@
 {
-  "name": "hello-world",
+  "name": "smudged-lines-web",
   "version": "0.1.0",
   "description": "Website for Smudged Lines",
   "repository": "https://github.com/enza252/smudgedlines",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "start": "webpack serve --mode development --port 8080 ",
+    "build": "webpack --mode production",
+    "test": "jest --coverage --coverageDirectory=output/coverage",
+    "lint": "eslint 'src/**/**.js' 'src/**/**.jsx' 'src/**.js'",
+    "lint:fix": "eslint --fix 'src/**/**.js' 'src/**/**.jsx' 'src/**.js'"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-material": "^1.0.0-beta-15"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.12.11",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^5.0.0",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-loader": "^15.9.6",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "browserslist": [
     "> 1%",
