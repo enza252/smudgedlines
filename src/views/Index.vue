@@ -6,35 +6,9 @@
     >
       <div class="md-layout">
         <div class="md-layout-item">
-          <div class="image-wrapper">
-            <img
-              v-show="leafShow"
-              :src="leaf4"
-              alt="leaf4"
-              class="leaf4"
-            >
-            <img
-              v-show="leafShow"
-              :src="leaf3"
-              alt="leaf3"
-              class="leaf3"
-            >
-            <img
-              v-show="leafShow"
-              :src="leaf2"
-              alt="leaf2"
-              class="leaf2"
-            >
-            <img
-              v-show="leafShow"
-              :src="leaf1"
-              alt="leaf1"
-              class="leaf1"
-            >
-            <div class="brand">
-              <h1>Vue Material Kit</h1>
-              <h3>A Badass Vue.js UI Kit made with Material Design.</h3>
-            </div>
+          <div class="brand">
+            <h1>Smudged Lines</h1>
+            <h3>Handcrafted designs using locally sourced & produced fabric.</h3>
           </div>
         </div>
       </div>

@@ -15,13 +15,23 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueMaterial from 'vue-material'
 import MaterialKit from './plugins/material-kit'
 
 Vue.config.productionTip = false
 
-Vue.use(VueMaterial)
 Vue.use(MaterialKit)
+
+const NavbarStore = {
+  showNavbar: false
+}
+
+Vue.mixin({
+  data () {
+    return {
+      NavbarStore
+    }
+  }
+})
 
 new Vue({
   router,
