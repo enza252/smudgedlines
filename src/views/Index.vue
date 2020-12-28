@@ -17,9 +17,11 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h2>Basic Elements</h2>
+            <h2 id="#designs">
+              Designs
+            </h2>
           </div>
-          <basic-elements />
+          <designs-section />
         </div>
       </div>
       <div class="section section-navbars">
@@ -319,7 +321,7 @@
 </template>
 
 <script>
-import BasicElements from './components/BasicElementsSection'
+import DesignsSection from '@/views/components/DesignsSection'
 import Navigation from './components/NavigationSection'
 import SmallNavigation from './components/SmallNavigationSection'
 import Tabs from './components/TabsSection'
@@ -332,7 +334,7 @@ import { LoginCard } from '@/components'
 export default {
   name: 'Index',
   components: {
-    BasicElements,
+    DesignsSection,
     Navigation,
     SmallNavigation,
     Tabs,
@@ -346,7 +348,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require('@/assets/img/vue-mk-header.jpg')
+      default: require('@/assets/img/bg-acid-synth.png')
     },
     leaf4: {
       type: String,

@@ -9,7 +9,7 @@
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
         <h3 class="md-title">
-          Vue Material Kit
+          Smudged Lines
         </h3>
       </div>
       <div class="md-toolbar-section-end">
@@ -47,19 +47,25 @@
                         <i class="material-icons">apps</i>
                         <p>Components</p>
                       </md-button>
-                      <ul class="dropdown-menu dropdown-with-icons">
+                      <ul class="dropdown-menu">
                         <li>
-                          <a href="#/">
-                            <i class="material-icons">layers</i>
-                            <p>All Components</p>
+                          <a href="/#designs">
+                            <p>Designs</p>
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                          >
-                            <i class="material-icons">content_paste</i>
-                            <p>Documentation</p>
+                          <a href="/#care">
+                            <p>Care</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/#about">
+                            <p>About</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/#contact">
+                            <p>Contact</p>
                           </a>
                         </li>
                       </ul>
@@ -69,65 +75,32 @@
               </li>
 
               <md-list-item
-                v-if="showDownload"
-                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                target="_blank"
-              >
-                <i class="material-icons">content_paste</i>
-                <p>Documentation</p>
-              </md-list-item>
-
-              <md-list-item
-                v-if="showDownload"
                 href="javascript:void(0)"
-                @click="scrollToElement()"
+                @click="scrollToElement('designs')"
               >
-                <i class="material-icons">cloud_download</i>
-                <p>Download</p>
+                <p>Designs</p>
               </md-list-item>
 
-              <li
-                v-else
-                class="md-list-item"
+              <md-list-item
+                href="javascript:void(0)"
+                @click="scrollToElement('care')"
               >
-                <a
-                  href="javascript:void(0)"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
-                >
-                  <div class="md-list-item-content">
-                    <drop-down direction="down">
-                      <md-button
-                        slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
-                        data-toggle="dropdown"
-                      >
-                        <i class="material-icons">view_carousel</i>
-                        <p>Examples</p>
-                      </md-button>
-                      <ul class="dropdown-menu dropdown-with-icons">
-                        <li>
-                          <a href="#/landing">
-                            <i class="material-icons">view_day</i>
-                            <p>Landing Page</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#/login">
-                            <i class="material-icons">fingerprint</i>
-                            <p>Login Page</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#/profile">
-                            <i class="material-icons">account_circle</i>
-                            <p>Profile Page</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </drop-down>
-                  </div>
-                </a>
-              </li>
+                <p>Care</p>
+              </md-list-item>
+
+              <md-list-item
+                href="javascript:void(0)"
+                @click="scrollToElement('about')"
+              >
+                <p>About</p>
+              </md-list-item>
+
+              <md-list-item
+                href="javascript:void(0)"
+                @click="scrollToElement('contact')"
+              >
+                <p>Contact</p>
+              </md-list-item>
 
               <md-list-item
                 href="https://twitter.com/CreativeTim"
@@ -276,8 +249,8 @@ export default {
     scrollListener () {
       resizeThrottler(this.handleScroll)
     },
-    scrollToElement () {
-      const element_id = document.getElementById('downloadSection')
+    scrollToElement (id) {
+      const element_id = document.getElementById(id)
       if (element_id) {
         element_id.scrollIntoView({ block: 'end', behavior: 'smooth' })
       }
