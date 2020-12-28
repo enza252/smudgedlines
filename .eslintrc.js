@@ -17,7 +17,9 @@ module.exports = {
   },
   'rules': {
     'strict': [2, 'global'],
-    'no-console': [2, { 'allow': ['error'] }],
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'vue/no-use-v-if-with-v-for': 'off',
     'no-multiple-empty-lines': [2, { 'max': 1, 'maxEOF': 0, 'maxBOF': 0 }],
     'space-infix-ops': 2,
     'key-spacing': 2,

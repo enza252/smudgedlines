@@ -1,24 +1,17 @@
 <template>
-  <div
-    id="app"
-  >
-    <IndexPage msg="Welcome to Your Vue.js App" />
+  <div id="material-kit">
+    <div :class="{ 'nav-open': true }">
+      <router-view name="header" />
+      <div>
+        <router-view />
+      </div>
+      <router-view name="footer" />
+    </div>
   </div>
 </template>
 
-<script>
-import IndexPage from './pages/IndexPage/IndexPage.vue'
-
-export default {
-  name: 'App',
-  components: {
-    IndexPage: IndexPage
-  }
-}
-</script>
-
 <style>
-#app {
+#material-kit {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

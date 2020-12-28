@@ -1,18 +1,13 @@
 <template>
   <div class="hello">
-    <Toolbar />
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
-import Toolbar from '../../components/Toolbar/Toolbar.vue'
 
 export default {
   name: 'HelloWorld',
-  components: {
-    Toolbar: Toolbar
-  },
   props: {
     msg: {
       type: String,
