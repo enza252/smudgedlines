@@ -39,14 +39,6 @@
                 >
                   <div class="md-list-item-content">
                     <drop-down direction="down">
-                      <md-button
-                        slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
-                        data-toggle="dropdown"
-                      >
-                        <i class="material-icons">apps</i>
-                        <p>Components</p>
-                      </md-button>
                       <ul class="dropdown-menu">
                         <li>
                           <a href="#designs">
@@ -104,51 +96,6 @@
                 @click="scrollToElement('contact')"
               >
                 <p>Contact</p>
-              </md-list-item>
-
-              <md-list-item
-                v-if="showDownload"
-
-                href="https://twitter.com/CreativeTim"
-                target="_blank"
-              >
-                <i class="fab fa-twitter" />
-                <p class="hidden-lg">
-                  Twitter
-                </p>
-                <md-tooltip
-                  md-direction="bottom"
-                >
-                  Follow us on Twitter
-                </md-tooltip>
-              </md-list-item>
-              <md-list-item
-                href="https://www.facebook.com/CreativeTim"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-square" />
-                <p class="hidden-lg">
-                  Facebook
-                </p>
-                <md-tooltip
-                  md-direction="bottom"
-                >
-                  Like us on Facebook
-                </md-tooltip>
-              </md-list-item>
-              <md-list-item
-                href="https://www.instagram.com/CreativeTimOfficial"
-                target="_blank"
-              >
-                <i class="fab fa-instagram" />
-                <p class="hidden-lg">
-                  Instagram
-                </p>
-                <md-tooltip
-                  md-direction="bottom"
-                >
-                  Follow us on Instagram
-                </md-tooltip>
               </md-list-item>
             </md-list>
           </div>
@@ -256,7 +203,7 @@ export default {
       resizeThrottler(this.handleScroll)
     },
     scrollToElement (id) {
-      const element_id = document.getElementById('#' + id)
+      const element_id = document.getElementById(id)
       if (element_id) {
         element_id.scrollIntoView({ block: 'end', behavior: 'smooth' })
       }

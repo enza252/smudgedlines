@@ -77,11 +77,6 @@ export default {
         }
       ]
     }
-  },
-  methods: {
-    classicModalHide () {
-      this.classicModal = false
-    }
   }
 }
 </script>

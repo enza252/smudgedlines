@@ -17,11 +17,21 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h2 id="designs">
+            <h2>
               Designs
             </h2>
           </div>
-          <designs-section />
+          <designs-section id="designs" />
+        </div>
+      </div>
+      <div class="section section-white">
+        <div class="container">
+          <div class="title">
+            <h2>
+              Care
+            </h2>
+          </div>
+          <care-section id="care" />
         </div>
       </div>
     </div>
@@ -30,11 +40,13 @@
 
 <script>
 import DesignsSection from '@/views/components/DesignsSection'
+import CareSection from '@/views/components/CareSection'
 
 export default {
   name: 'Index',
   components: {
-    DesignsSection
+    DesignsSection,
+    CareSection
   },
   bodyClass: 'index-page',
   props: {
@@ -86,6 +98,10 @@ export default {
   .md-button + .md-button {
     margin-left: 5px;
   }
+}
+
+.section-white {
+  background: #eee
 }
 
 @media all and (min-width: 991px) {
