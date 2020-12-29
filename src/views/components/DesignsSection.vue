@@ -13,59 +13,18 @@
           navigation-next-label="<i class='material-icons'>keyboard_arrow_right</i>"
           navigation-prev-label="<i class='material-icons'>keyboard_arrow_left</i>"
         >
-          <slide>
+          <slide
+            v-for="(item, index) in carouselData"
+            :key="index"
+          >
             <div class="carousel-caption">
               <h4 class="sm-tee-tag">
-                Acid Synth - Men's Tee
+                {{ item.name }}
               </h4>
             </div>
             <img
-              :src="carousel1_acid_synth"
-              alt="carousel1"
-            >
-          </slide>
-          <slide>
-            <div class="carousel-caption">
-              <h4 class="sm-tee-tag">
-                Amoeba - Men's Tee
-              </h4>
-            </div>
-            <img
-              :src="carousel2_amoeba"
-              alt="carousel2"
-            >
-          </slide>
-          <slide>
-            <div class="carousel-caption">
-              <h4 class="sm-tee-tag">
-                Rosé Fireworks - Men's Tee
-              </h4>
-            </div>
-            <img
-              :src="carousel3_rose_fireworks"
-              alt="carousel3"
-            >
-          </slide>
-          <slide>
-            <div class="carousel-caption">
-              <h4 class="sm-tee-tag">
-                Djibou - Men's Tee
-              </h4>
-            </div>
-            <img
-              :src="carousel4_djibou"
-              alt="carousel4"
-            >
-          </slide>
-          <slide>
-            <div class="carousel-caption">
-              <h4 class="sm-tee-tag">
-                Connection - Men's Tee
-              </h4>
-            </div>
-            <img
-              :src="carousel5_connection"
-              alt="carousel5"
+              :src="item.source"
+              :alt="item.alt"
             >
           </slide>
         </carousel>
@@ -80,14 +39,43 @@
 }
 </style>
 <script>
+const sources = {
+  carousel1_acid_synth: require('@/assets/img/designs/acid-synth-carousel-1450x1088-model.jpg'),
+  carousel2_amoeba: require('@/assets/img/designs/amoeba-carousel-1450x1088-model.jpg'),
+  carousel3_rose_fireworks: require('@/assets/img/designs/rose-fireworks-carousel-1450x1088-model.jpg'),
+  carousel4_djibou: require('@/assets/img/designs/djibou-carousel-1450x1088-model-flip.jpg'),
+  carousel5_connection: require('@/assets/img/designs/connection-carousel-1450x1088.jpg'),
+}
 export default {
   data () {
     return {
-      carousel1_acid_synth: require('@/assets/img/designs/acid-synth-carousel-1450x1088-model.jpg'),
-      carousel2_amoeba: require('@/assets/img/designs/amoeba-carousel-1450x1088-model.jpg'),
-      carousel3_rose_fireworks: require('@/assets/img/designs/rose-fireworks-carousel-1450x1088-model.jpg'),
-      carousel4_djibou: require('@/assets/img/designs/djibou-carousel-1450x1088-model-flip.jpg'),
-      carousel5_connection: require('@/assets/img/designs/connection-carousel-1450x1088.jpg'),
+      carouselData: [
+        {
+          name: 'Connection - Men\'s Tee',
+          source: sources.carousel5_connection,
+          alt: 'Connection - Men\'s T-Shirt'
+        },
+        {
+          name: 'Djibou - Men\'s Tee',
+          source: sources.carousel4_djibou,
+          alt: 'Djibou - Men\'s T-Shirt'
+        },
+        {
+          name: 'Rosé Fireworks - Men\'s Tee',
+          source: sources.carousel3_rose_fireworks,
+          alt: 'Rosé Fireworks - Men\'s T-Shirt'
+        },
+        {
+          name: 'Amoeba - Men\'s Tee',
+          source: sources.carousel2_amoeba,
+          alt: 'Amoeba - Men\'s T-Shirt'
+        },
+        {
+          name: 'Acid Synth - Men\'s Tee',
+          source: sources.carousel1_acid_synth,
+          alt: 'Acid Synth - Men\'s T-Shirt'
+        }
+      ]
     }
   },
   methods: {

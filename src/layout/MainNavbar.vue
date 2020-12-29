@@ -2,7 +2,7 @@
   <md-toolbar
     id="toolbar"
     md-elevation="0"
-    class="md-transparent md-absolute"
+    class="md-transparent md-absolute md-dark"
     :class="extraNavClasses"
     :color-on-scroll="colorOnScroll"
   >
@@ -49,22 +49,22 @@
                       </md-button>
                       <ul class="dropdown-menu">
                         <li>
-                          <a href="/#designs">
+                          <a href="#designs">
                             <p>Designs</p>
                           </a>
                         </li>
                         <li>
-                          <a href="/#care">
+                          <a href="#care">
                             <p>Care</p>
                           </a>
                         </li>
                         <li>
-                          <a href="/#about">
+                          <a href="#about">
                             <p>About</p>
                           </a>
                         </li>
                         <li>
-                          <a href="/#contact">
+                          <a href="#contact">
                             <p>Contact</p>
                           </a>
                         </li>
@@ -75,6 +75,7 @@
               </li>
 
               <md-list-item
+                v-if="showDownload"
                 href="javascript:void(0)"
                 @click="scrollToElement('designs')"
               >
@@ -82,6 +83,7 @@
               </md-list-item>
 
               <md-list-item
+                v-if="showDownload"
                 href="javascript:void(0)"
                 @click="scrollToElement('care')"
               >
@@ -89,6 +91,7 @@
               </md-list-item>
 
               <md-list-item
+                v-if="showDownload"
                 href="javascript:void(0)"
                 @click="scrollToElement('about')"
               >
@@ -96,6 +99,7 @@
               </md-list-item>
 
               <md-list-item
+                v-if="showDownload"
                 href="javascript:void(0)"
                 @click="scrollToElement('contact')"
               >
@@ -103,6 +107,8 @@
               </md-list-item>
 
               <md-list-item
+                v-if="showDownload"
+
                 href="https://twitter.com/CreativeTim"
                 target="_blank"
               >
@@ -250,7 +256,7 @@ export default {
       resizeThrottler(this.handleScroll)
     },
     scrollToElement (id) {
-      const element_id = document.getElementById(id)
+      const element_id = document.getElementById('#' + id)
       if (element_id) {
         element_id.scrollIntoView({ block: 'end', behavior: 'smooth' })
       }
