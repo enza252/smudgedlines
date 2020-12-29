@@ -57,7 +57,7 @@
                         </li>
                         <li>
                           <a href="#contact">
-                            <p>Contact</p>
+                            <p>Shop</p>
                           </a>
                         </li>
                       </ul>
@@ -93,9 +93,9 @@
               <md-list-item
                 v-if="showDownload"
                 href="javascript:void(0)"
-                @click="scrollToElement('contact')"
+                @click="scrollToElement('store')"
               >
-                <p>Contact</p>
+                <p>Store</p>
               </md-list-item>
             </md-list>
           </div>

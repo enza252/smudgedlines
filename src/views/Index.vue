@@ -34,6 +34,26 @@
           <care-section id="care" />
         </div>
       </div>
+      <div class="section section-basic">
+        <div class="container">
+          <div class="title">
+            <h2>
+              About
+            </h2>
+          </div>
+          <about-section id="about" />
+        </div>
+      </div>
+      <div class="section section-white">
+        <div class="container">
+          <div class="title">
+            <h2>
+              Store
+            </h2>
+          </div>
+          <contact-section id="store" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -41,12 +61,16 @@
 <script>
 import DesignsSection from '@/views/components/DesignsSection'
 import CareSection from '@/views/components/CareSection'
+import AboutSection from '@/views/components/AboutSection'
+import ContactSection from '@/views/components/StoreSection'
 
 export default {
   name: 'Index',
   components: {
     DesignsSection,
-    CareSection
+    CareSection,
+    AboutSection,
+    ContactSection
   },
   bodyClass: 'index-page',
   props: {
