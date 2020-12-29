@@ -40,39 +40,39 @@
 </style>
 <script>
 const sources = {
-  carousel1_acid_synth: require('@/assets/img/designs/acid-synth-carousel-1450x1088-model.jpg'),
-  carousel2_amoeba: require('@/assets/img/designs/amoeba-carousel-1450x1088-model.jpg'),
-  carousel3_rose_fireworks: require('@/assets/img/designs/rose-fireworks-carousel-1450x1088-model.jpg'),
-  carousel4_djibou: require('@/assets/img/designs/djibou-carousel-1450x1088-model-flip.jpg'),
-  carousel5_connection: require('@/assets/img/designs/connection-carousel-1450x1088.jpg'),
+  carousel_acid_synth: require('@/assets/img/designs/acid-synth-carousel-1450x1088-model.jpg'),
+  carousel_amoeba: require('@/assets/img/designs/amoeba-carousel-1450x1088-model.jpg'),
+  carousel_rose_fireworks: require('@/assets/img/designs/rose-fireworks-carousel-1450x1088-model.jpg'),
+  carousel_djibou: require('@/assets/img/designs/djibou-carousel-1450x1088-model-flip.jpg'),
+  carousel_connection: require('@/assets/img/designs/connection-carousel-1450x1088-model.jpg'),
 }
 export default {
   data () {
     return {
       carouselData: [
         {
-          name: 'Connection - Men\'s Tee',
-          source: sources.carousel5_connection,
-          alt: 'Connection - Men\'s T-Shirt'
-        },
-        {
           name: 'Djibou - Men\'s Tee',
-          source: sources.carousel4_djibou,
+          source: sources.carousel_djibou,
           alt: 'Djibou - Men\'s T-Shirt'
         },
         {
           name: 'Rosé Fireworks - Men\'s Tee',
-          source: sources.carousel3_rose_fireworks,
+          source: sources.carousel_rose_fireworks,
           alt: 'Rosé Fireworks - Men\'s T-Shirt'
         },
         {
+          name: 'Connection - Men\'s Tee',
+          source: sources.carousel_connection,
+          alt: 'Connection - Men\'s T-Shirt'
+        },
+        {
           name: 'Amoeba - Men\'s Tee',
-          source: sources.carousel2_amoeba,
+          source: sources.carousel_amoeba,
           alt: 'Amoeba - Men\'s T-Shirt'
         },
         {
           name: 'Acid Synth - Men\'s Tee',
-          source: sources.carousel1_acid_synth,
+          source: sources.carousel_acid_synth,
           alt: 'Acid Synth - Men\'s T-Shirt'
         }
       ]
