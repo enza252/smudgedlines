@@ -8,7 +8,7 @@
         <div class="md-layout-item">
           <div class="brand">
             <h1>Smudged Lines</h1>
-            <h3>Handcrafted designs using locally sourced & produced fabric.</h3>
+            <h3>Handcrafted designs from locally sourced & produced fabric.</h3>
           </div>
         </div>
       </div>

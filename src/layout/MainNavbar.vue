@@ -25,47 +25,8 @@
 
         <div class="md-collapse">
           <div class="md-collapse-wrapper">
-            <mobile-menu nav-mobile-section-start="false">
-              <!-- Here you can add your items from the section-start of your toolbar -->
-            </mobile-menu>
+            <mobile-menu nav-mobile-section-start="false" />
             <md-list>
-              <li
-                v-if="!showDownload"
-                class="md-list-item"
-              >
-                <a
-                  href="javascript:void(0)"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
-                >
-                  <div class="md-list-item-content">
-                    <drop-down direction="down">
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a href="#designs">
-                            <p>Designs</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#care">
-                            <p>Care</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#about">
-                            <p>About</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#contact">
-                            <p>Shop</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </drop-down>
-                  </div>
-                </a>
-              </li>
-
               <md-list-item
                 v-if="showDownload"
                 href="javascript:void(0)"
@@ -153,7 +114,7 @@ export default {
   },
   computed: {
     showDownload () {
-      const excludedRoutes = ['login', 'landing', 'profile']
+      const excludedRoutes = ['/']
       return excludedRoutes.every(r => r !== this.$route.name)
     }
   },
