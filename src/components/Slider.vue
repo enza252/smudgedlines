@@ -11,7 +11,10 @@ import noUiSlider from 'nouislider'
 export default {
   name: 'Slider',
   props: {
-    value: [String, Array, Number],
+    value: {
+      type: [String, Array, Number],
+      default: () => ({})
+    },
     disabled: Boolean,
     start: {
       type: [Number, Array],
