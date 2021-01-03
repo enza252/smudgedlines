@@ -251,10 +251,7 @@ export default {
     },
     getTabIndex (i) {
       return 'tab-pane-' + i + ''
-    },
-    getTabPane: function (index) {
-      return 'tab-pane-' + index + ''
-    },
+    }
   }
 }
 </script>
