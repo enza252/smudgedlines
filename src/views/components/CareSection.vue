@@ -18,7 +18,12 @@
           </h2>
           <md-divider />
           <md-card-content>
-            {{ item.text }}
+            <div
+              v-for="(bullet, bulletIndex) in item.bullets"
+              :key="bulletIndex"
+            >
+              {{ bullet }}
+            </div>
           </md-card-content>
         </md-ripple>
       </md-card>
@@ -32,19 +37,16 @@ export default {
     return {
       tiles: [
         {
-          title: 'Title',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ' +
-                'labore et dolore magna aliqua. Mauris commodo quis imperdiet massa tincidunt. Leo vel orci porta non pulvinar neque laoreet suspendisse.'
+          title: 'Machine Wash',
+          bullets: ['Gentle and warm wash, 30°C is ideal.', 'Wash with similar colours.']
         },
         {
-          title: 'Title',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ' +
-                'labore et dolore magna aliqua. Mauris commodo quis imperdiet massa tincidunt. Leo vel orci porta non pulvinar neque laoreet suspendisse.'
+          title: 'Drying',
+          bullets: ['Hang outside or near a warm radiator.', 'Do not tumble dry.']
         },
         {
-          title: 'Title',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ' +
-                'labore et dolore magna aliqua. Mauris commodo quis imperdiet massa tincidunt. Leo vel orci porta non pulvinar neque laoreet suspendisse.'
+          title: 'Other Do Nots',
+          bullets: ['Do not bleach.', 'Do not iron.']
         }
       ]
     }

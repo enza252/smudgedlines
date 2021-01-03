@@ -4,7 +4,7 @@
     :class="`md-alignment-space-between`"
   >
     <div class="md-layout-item md-size-100">
-      <h3>Our items are available only to buy on Depop, the web store is coming soon!</h3>
+      <h3>Our garments are available on depop</h3>
     </div>
     <div
       class="md-layout-item md-size-50 text-center"
