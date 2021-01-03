@@ -38,7 +38,9 @@
             :key="item"
             :class="getTabContent(index + 1)"
           >
-            <slot :name="getTabContent(index + 1)">
+            <slot
+              :name="getTabContent(index + 1)"
+            >
               This is the default text!
             </slot>
           </div>
@@ -86,7 +88,10 @@ export default {
     },
     getTabContent: function (index) {
       return 'tab-pane-' + index + ''
-    }
+    },
+    log (item) {
+      console.log(item)
+    },
   }
 }
 </script>
