@@ -8,7 +8,7 @@
       >
         <template
           v-for="(design, designIndex) in designs"
-          v-slot:[getTabPane(designIndex+1)]
+          v-slot:[getTabIndex(designIndex+1)]
           :load="log('tab-pane-' + (designIndex+1) + '')"
         >
           <div
