@@ -1,19 +1,13 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
-//
+
 module.exports = {
   devServer: {
     publicPath: '/',
-    //     contentBase: './public',
-    //     hot: true,
-    //     historyApiFallback: true
+    hot: true,
+    historyApiFallback: true
   },
-  //   entry: './src/index.js',
-  //   output: {
-  //     path: path.resolve(__dirname, './dist'),
-  //     filename: 'index_bundle.js',
-  //   },
   module: {
     rules: [
       {
