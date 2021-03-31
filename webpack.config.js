@@ -1,40 +1,21 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
-
+//
 module.exports = {
   devServer: {
     publicPath: '/',
-    contentBase: './public',
-    hot: true,
-    historyApiFallback: true
-
+    //     contentBase: './public',
+    //     hot: true,
+    //     historyApiFallback: true
   },
-  entry: {
-    index: './src/index.js'
-  },
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'index_bundle.js',
-  },
+  //   entry: './src/index.js',
+  //   output: {
+  //     path: path.resolve(__dirname, './dist'),
+  //     filename: 'index_bundle.js',
+  //   },
   module: {
     rules: [
-      {
-        test: /\.s(c|a)ss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            // Requires >= sass-loader@^8.0.0
-            options: {
-              implementation: require('sass'),
-              sassOptions: {
-                indentedSyntax: true // optional
-              },
-            },
-          },
-        ],
-      },
       {
         test: /\.vue$/,
         loader: 'vue-loader'
@@ -46,18 +27,9 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'vue-style-loader',
           'css-loader'
         ]
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader'
-          }
-        ]
-      },
+      }
     ],
   },
   resolve: {
@@ -68,5 +40,9 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new HtmlWebPackPlugin({
+      template: './src/index.html',
+      filename: './index.html'
+    }),
   ]
 }
