@@ -13,8 +13,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/testSetup.js'],
   snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
   testMatch: [
-    '<rootDir>/src/test/**/*.spec.js',
-    '<rootDir>/ots-common/src/test/**/*.spec.js'
+    '<rootDir>/src/**/*.test.js',
   ],
   testURL: 'http://localhost/',
   transform: {
