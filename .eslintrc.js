@@ -7,9 +7,7 @@ module.exports = {
     jest: true
   },
   'extends': [
-    'plugin:vue/essential',
     'eslint:recommended',
-    'plugin:vue/recommended'
   ],
   'parserOptions': {
     'parser': 'babel-eslint',
