@@ -11,10 +11,6 @@ export default new Router({
       path: '/',
       name: 'index',
       components: { default: Index },
-      props: {
-        header: { colorOnScroll: 400 },
-        footer: { backgroundColor: 'black' }
-      }
     }
   ],
   scrollBehavior: to => {

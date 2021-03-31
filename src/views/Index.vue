@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="index page">
     <p>Index.vue</p>
   </div>
 </template>

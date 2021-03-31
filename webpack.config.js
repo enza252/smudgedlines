@@ -5,7 +5,16 @@ module.exports = {
   devServer: {
     publicPath: '/',
     contentBase: './public',
-    hot: true
+    hot: true,
+    historyApiFallback: true
+
+  },
+  entry: {
+    index: './src/index.js'
+  },
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index_bundle.js',
   },
   module: {
     rules: [
@@ -27,27 +36,37 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
-        loader: 'css-loader'
-      },
-      {
         test: /\.vue$/,
         loader: 'vue-loader'
-      }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ]
+      },
     ],
   },
   resolve: {
     alias: {
-      '@/components': path.resolve(__dirname, 'src/components/'),
-      '@/pages': path.resolve(__dirname, 'src/pages/'),
-      '@/context': path.resolve(__dirname, 'src/context/'),
-      '@/router': path.resolve(__dirname, 'src/router/'),
-      '@/views': path.resolve(__dirname, 'src/views/'),
-      '@/plugins': path.resolve(__dirname, 'src/plugins/')
+      '@': path.resolve('src/'),
+      'vue$': 'vue/dist/vue.esm.js'
     }
   },
   plugins: [
-    // make sure to include the plugin!
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
   ]
 }

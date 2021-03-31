@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "description": "Website for Smudged Lines",
   "repository": "https://github.com/enza252/smudgedlines",
-  "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development --port 8081",
-    "build": "vue-cli-service build",
-    "test": "jest --coverage --coverageDirectory=output/coverage",
-    "lint": "vue-cli-service lint"
+    "build": "webpack build",
+    "test": "jest --coverage --coverageDirectory=output/coverage"
   },
+  "main": "./src/index.js",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "core-js": "^3.6.5",
@@ -30,6 +29,8 @@
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.2.2",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
     "lodash": "^4.17.20",
     "material-design-icons-iconfont": "^6.1.0",
     "vue-loader": "^15.9.6",
