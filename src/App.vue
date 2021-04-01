@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <v-app id="v-app">
+  <v-app id="v-app">
+    <v-main>
       <router-view />
-    </v-app>
-  </div>
+    </v-main>
+  </v-app>
 </template>
 <script>
 import '@/styles/variables.scss'
