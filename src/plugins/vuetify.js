@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import 'vuetify/dist/vuetify.min.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 import Vuetify, {
   VCard,
@@ -47,6 +47,9 @@ const opts = {
         blue: '#343f56'
       },
     },
+  },
+  icons: {
+    iconfont: 'mdiSvg',
   },
 }
 
