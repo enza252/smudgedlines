@@ -11,4 +11,11 @@ describe('Tests the Header view is rendered correctly', () => {
     const { asFragment } = await render(Header, options)
     expect(asFragment).toMatchSnapshot()
   })
+  it('tests the nav bar button texts are present on the page', async () => {
+    await render(Header, options)
+    expect(screen.getByText('Designs')).toBeInTheDocument()
+    expect(screen.getByText('Care')).toBeInTheDocument()
+    expect(screen.getByText('About Us')).toBeInTheDocument()
+    expect(screen.getByText('Shop')).toBeInTheDocument()
+  })
 })

@@ -1,13 +1,21 @@
 import Index from '@/pages'
-import { screen, render } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
+import Vuetify from 'vuetify'
 
 const options = {
   routes: [],
+  vuetify: new Vuetify()
 }
 
+let fragment
+
+beforeAll(async () => {
+  const { asFragment } = await render(Index, options)
+  fragment = asFragment
+})
+
 describe('tests the index page renders', () => {
-  test('tests the correct text is shown on the page', async () => {
-    await render(Index, options)
-    expect(screen.getByText('Index.vue')).toBeInTheDocument()
+  it('performs a snapshot test', () => {
+    expect(fragment).toMatchSnapshot()
   })
 })
