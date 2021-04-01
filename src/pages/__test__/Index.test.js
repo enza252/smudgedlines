@@ -1,4 +1,4 @@
-import Index from '@/views/Index'
+import Index from '@/pages'
 import { screen, render } from '@testing-library/vue'
 
 const options = {
