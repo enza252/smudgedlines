@@ -7,13 +7,12 @@ module.exports = {
     jest: true
   },
   'extends': [
-    'plugin:vue/essential',
     'eslint:recommended',
-    'plugin:vue/recommended'
   ],
   'parserOptions': {
     'parser': 'babel-eslint',
-    'sourceType': 'module'
+    'sourceType': 'module',
+    "ecmaVersion": 2018
   },
   'rules': {
     'strict': [2, 'global'],
