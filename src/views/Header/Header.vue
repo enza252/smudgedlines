@@ -10,21 +10,22 @@
 
       <v-btn>
         Designs
-        <v-icon right >mdi-home</v-icon>
-
+        <v-icon right >{{ mdiTShirtPath }}</v-icon>
       </v-btn>
-      <v-btn>
-        About
-        <v-icon right>
-          mdi-t-shirt-crew-outline
-        </v-icon>
-      </v-btn>
+      <!--      <v-btn>-->
+      <!--        About-->
+      <!--        <v-icon right>info-outline</v-icon>-->
+      <!--      </v-btn>-->
     </v-app-bar>
   </div>
 </template>
 
 <script>
+import { mdiTshirtCrewOutline } from '@mdi/js'
 export default {
-  name: 'Header'
+  name: 'Header',
+  data: () => ({
+    mdiTShirtPath: mdiTshirtCrewOutline
+  }),
 }
 </script>
