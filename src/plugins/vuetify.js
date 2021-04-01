@@ -44,7 +44,9 @@ const opts = {
         light: '#f8f5f1',
         orange: '#e9896a',
         green: '#387c6d',
-        blue: '#343f56'
+        blue: '#343f56',
+        white: '#ffffff',
+        black: '#000000',
       },
     },
   },

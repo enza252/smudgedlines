@@ -8,22 +8,22 @@
       <v-toolbar-title>Smudged Lines</v-toolbar-title>
       <v-spacer></v-spacer>
 
-      <v-btn color="orange" class="ma-1">
+      <v-btn color="white" class="ma-1" text>
         Designs
         <v-icon right >{{ mdiTShirtIconPath }}</v-icon>
       </v-btn>
 
-      <v-btn color="orange" class="ma-1">
+      <v-btn color="white" class="ma-1" text>
         Care
         <v-icon right>{{ mdiHeartOutlineIconPath }}</v-icon>
       </v-btn>
 
-      <v-btn color="orange" class="ma-1">
+      <v-btn color="white" class="ma-1" text>
         About Us
         <v-icon right>{{ mdiInfoOutlineIconPath }}</v-icon>
       </v-btn>
 
-      <v-btn color="orange" class="ma-1">
+      <v-btn color="white" class="ma-1" text>
         Shop
         <v-icon right>{{ mdiCartOutlineIconPath }}</v-icon>
       </v-btn>
