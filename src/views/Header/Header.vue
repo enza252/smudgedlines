@@ -8,24 +8,38 @@
       <v-toolbar-title>Smudged Lines</v-toolbar-title>
       <v-spacer></v-spacer>
 
-      <v-btn>
+      <v-btn color="orange" class="ma-1">
         Designs
-        <v-icon right >{{ mdiTShirtPath }}</v-icon>
+        <v-icon right >{{ mdiTShirtIconPath }}</v-icon>
       </v-btn>
-      <!--      <v-btn>-->
-      <!--        About-->
-      <!--        <v-icon right>info-outline</v-icon>-->
-      <!--      </v-btn>-->
+
+      <v-btn color="orange" class="ma-1">
+        Care
+        <v-icon right>{{ mdiHeartOutlineIconPath }}</v-icon>
+      </v-btn>
+
+      <v-btn color="orange" class="ma-1">
+        About Us
+        <v-icon right>{{ mdiInfoOutlineIconPath }}</v-icon>
+      </v-btn>
+
+      <v-btn color="orange" class="ma-1">
+        Shop
+        <v-icon right>{{ mdiCartOutlineIconPath }}</v-icon>
+      </v-btn>
     </v-app-bar>
   </div>
 </template>
 
 <script>
-import { mdiTshirtCrewOutline } from '@mdi/js'
+import { mdiTshirtCrewOutline, mdiInformationOutline, mdiHeartOutline, mdiCartOutline } from '@mdi/js'
 export default {
   name: 'Header',
   data: () => ({
-    mdiTShirtPath: mdiTshirtCrewOutline
+    mdiTShirtIconPath: mdiTshirtCrewOutline,
+    mdiInfoOutlineIconPath: mdiInformationOutline,
+    mdiHeartOutlineIconPath: mdiHeartOutline,
+    mdiCartOutlineIconPath: mdiCartOutline
   }),
 }
 </script>
