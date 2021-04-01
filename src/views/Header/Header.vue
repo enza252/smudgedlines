@@ -3,9 +3,17 @@
     <v-app-bar
       color="green"
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon>
+        <template v-slot:default>
+          <v-icon color="white" right>mdi-menu</v-icon>
+        </template>
+      </v-app-bar-nav-icon>
 
-      <v-toolbar-title>Smudged Lines</v-toolbar-title>
+      <v-app-bar-title>
+        <template v-slot:default>
+          <h3 style="color: white">Smudged Lines</h3>
+        </template>
+      </v-app-bar-title>
       <v-spacer></v-spacer>
 
       <v-btn color="white" class="ma-1" text>
