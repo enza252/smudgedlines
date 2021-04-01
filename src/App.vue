@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-// import '@/styles/variables.scss'
+import '@/styles/variables.scss'
 export default {
   name: 'App'
 }
