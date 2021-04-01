@@ -1,8 +1,37 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 
-Vue.use(Vuetify)
+import Vuetify, {
+  VCard,
+  VImg,
+  VCardTitle,
+  VBtn,
+  VCardActions,
+  VCardText,
+  VProgressCircular,
+  VSpacer,
+  VDialog,
+  VDivider,
+  VAlert,
+  VApp,
+} from 'vuetify/lib'
+
+Vue.use(Vuetify, {
+  components: {
+    VCard,
+    VImg,
+    VCardTitle,
+    VBtn,
+    VCardActions,
+    VCardText,
+    VProgressCircular,
+    VSpacer,
+    VDialog,
+    VDivider,
+    VAlert,
+    VApp,
+  },
+})
 
 const opts = {
   theme: {

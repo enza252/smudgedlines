@@ -1,5 +1,6 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const { VuetifyLoaderPlugin } = require('vuetify-loader')
 const path = require('path')
 
 module.exports = {
@@ -55,5 +56,6 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html'
     }),
+    new VuetifyLoaderPlugin(),
   ]
 }

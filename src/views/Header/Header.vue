@@ -2,7 +2,6 @@
   <div>
     <v-app-bar
       color="green"
-      absolute
     >
       <v-toolbar-title>Smudged Lines</v-toolbar-title>
     </v-app-bar>
