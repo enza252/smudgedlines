@@ -1,11 +1,11 @@
 <template>
-  <v-app-bar
+  <div>
+    <v-app-bar
       color="green"
-      dense
-      dark
-  >
-    <v-toolbar-title>Smudged Lines</v-toolbar-title>
-  </v-app-bar>
+    >
+      <v-toolbar-title>Smudged Lines</v-toolbar-title>
+    </v-app-bar>
+  </div>
 </template>
 
 <script>
