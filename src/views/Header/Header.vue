@@ -16,24 +16,9 @@
     </v-app-bar-title>
     <v-spacer></v-spacer>
 
-    <v-btn color="white" class="ma-1" text>
-      Designs
-      <v-icon right >{{ mdiTShirtIconPath }}</v-icon>
-    </v-btn>
-
-    <v-btn color="white" class="ma-1" text>
-      Care
-      <v-icon right>{{ mdiHeartOutlineIconPath }}</v-icon>
-    </v-btn>
-
-    <v-btn color="white" class="ma-1" text>
-      About Us
-      <v-icon right>{{ mdiInfoOutlineIconPath }}</v-icon>
-    </v-btn>
-
-    <v-btn color="white" class="ma-1" text>
-      Shop
-      <v-icon right>{{ mdiCartOutlineIconPath }}</v-icon>
+    <v-btn color="white" class="ma-1" text v-for="(button, index) in navBarButtons" :key="index">
+      {{ button.buttonText }}
+      <v-icon right >{{ button.icon }}</v-icon>
     </v-btn>
   </v-app-bar>
 </template>
@@ -44,10 +29,24 @@ import path from 'path'
 export default {
   name: 'Header',
   data: () => ({
-    mdiTShirtIconPath: mdiTshirtCrewOutline,
-    mdiInfoOutlineIconPath: mdiInformationOutline,
-    mdiHeartOutlineIconPath: mdiHeartOutline,
-    mdiCartOutlineIconPath: mdiCartOutline,
+    navBarButtons: [
+      {
+        icon: mdiTshirtCrewOutline,
+        buttonText: 'Designs'
+      },
+      {
+        icon: mdiHeartOutline,
+        buttonText: 'Care'
+      },
+      {
+        icon: mdiInformationOutline,
+        buttonText: 'About Us'
+      },
+      {
+        icon: mdiCartOutline,
+        buttonText: 'Shop'
+      }
+    ],
     slLogoPath: path.resolve('static/assets/img/logo/sl-icon-white-200x200.png')
   }),
 }
