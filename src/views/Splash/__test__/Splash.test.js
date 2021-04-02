@@ -7,6 +7,9 @@ const options = {
   vuetify: new Vuetify()
 }
 
+const tagLine = 'Handcrafted designs from locally sourced & produced fabric.'
+const header = 'Smudged Lines'
+
 describe('tests the Splash view renders', () => {
   it('performs a snapshot test', async () => {
     const { asFragment } = await render(Splash, options)
@@ -15,9 +18,9 @@ describe('tests the Splash view renders', () => {
 
   it('tests the smudged lines header and tagline is visible within the component', async () => {
     await render(Splash, options)
-    expect(screen.getByText('Smudged Lines')).toBeInTheDocument()
-    expect(screen.getByText('Smudged Lines')).toBeVisible()
-    expect(screen.getByText('Handcrafted designs from locally sourced & produced fabric.')).toBeInTheDocument()
-    expect(screen.getByText('Handcrafted designs from locally sourced & produced fabric.')).toBeVisible()
+    expect(screen.getByText(header)).toBeInTheDocument()
+    expect(screen.getByText(header)).toBeVisible()
+    expect(screen.getByText(tagLine)).toBeInTheDocument()
+    expect(screen.getByText(tagLine)).toBeVisible()
   })
 })
