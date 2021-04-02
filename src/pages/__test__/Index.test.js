@@ -7,15 +7,9 @@ const options = {
   vuetify: new Vuetify()
 }
 
-let fragment
-
-beforeAll(async () => {
-  const { asFragment } = await render(Index, options)
-  fragment = asFragment
-})
-
 describe('tests the index page renders', () => {
-  it('performs a snapshot test', () => {
-    expect(fragment).toMatchSnapshot()
+  it('performs a snapshot test', async () => {
+    const { asFragment } = await render(Index, options)
+    expect(asFragment).toMatchSnapshot()
   })
 })
