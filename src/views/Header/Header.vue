@@ -1,10 +1,11 @@
 <template>
   <v-app-bar
     color="green"
+    style="border-bottom: 1px solid #ffffff !important;"
   >
     <v-app-bar-nav-icon>
       <template v-slot:default>
-        <v-icon color="white" right>mdi-menu</v-icon>
+        <v-img :src="slLogoPath" max-height="50" max-width="50"/>
       </template>
     </v-app-bar-nav-icon>
 
@@ -39,13 +40,20 @@
 
 <script>
 import { mdiTshirtCrewOutline, mdiInformationOutline, mdiHeartOutline, mdiCartOutline } from '@mdi/js'
+import path from 'path'
 export default {
   name: 'Header',
   data: () => ({
     mdiTShirtIconPath: mdiTshirtCrewOutline,
     mdiInfoOutlineIconPath: mdiInformationOutline,
     mdiHeartOutlineIconPath: mdiHeartOutline,
-    mdiCartOutlineIconPath: mdiCartOutline
+    mdiCartOutlineIconPath: mdiCartOutline,
+    slLogoPath: path.resolve('static/assets/img/logo/sl-icon-white-200x200.png')
   }),
 }
 </script>
+<style>
+.white-text {
+  color: #fff;
+}
+</style>
