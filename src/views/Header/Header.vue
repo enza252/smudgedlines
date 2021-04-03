@@ -15,11 +15,17 @@
       </template>
     </v-app-bar-title>
     <v-spacer></v-spacer>
-
-    <v-btn color="white" class="ma-1" text v-for="(button, index) in navBarButtons" :key="index">
-      {{ button.buttonText }}
-      <v-icon right >{{ button.icon }}</v-icon>
-    </v-btn>
+    <div v-for="(button, index) in navBarButtons" :key="index">
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
+            {{ button.buttonText }}
+            <v-icon right >{{ button.icon }}</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ button.buttonText }}</span>
+      </v-tooltip>
+    </div>
   </v-app-bar>
 </template>
 
