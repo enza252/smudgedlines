@@ -7,7 +7,7 @@
       <Splash/>
     </v-row>
     <v-row class="d-flex flex-column flex-grow-1" justify="center" align="center">
-      <v-sheet min-width="80%" rounded elevation="2" class="main" style="margin-top: -60px">
+      <v-sheet width="95%" rounded elevation="12" class="main" style="margin-top: -5rem; z-index: 1">
         <Designs/>
       </v-sheet>
     </v-row>
