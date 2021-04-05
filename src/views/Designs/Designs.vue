@@ -28,9 +28,13 @@
           v-for="(design, index) in designs"
           :key="index"
         >
-          <v-card flat>
-            <v-card-text>{{ design.name }}</v-card-text>
-          </v-card>
+          <v-container>
+            <v-row class="d-flex flex-column flex-grow-1">
+              <v-card>
+                <v-card-text>{{ design.name }}</v-card-text>
+              </v-card>
+            </v-row>
+          </v-container>
         </v-tab-item>
       </v-tabs-items>
     </v-row>
