@@ -15,7 +15,7 @@ import path from 'path'
 export default {
   name: 'Splash',
   data: () => ({
-    imgPath: path.resolve('static/assets/img/bg-acid-synth.png')
+    imgPath: path.resolve('public/assets/img/bg-acid-synth.png')
   })
 }
 </script>

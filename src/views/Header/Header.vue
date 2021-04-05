@@ -53,7 +53,7 @@ export default {
         buttonText: 'Shop'
       }
     ],
-    slLogoPath: path.resolve('static/assets/img/logo/sl-icon-white-200x200.png')
+    slLogoPath: path.resolve('public/assets/img/logo/sl-icon-white-200x200.png')
   }),
 }
 </script>
