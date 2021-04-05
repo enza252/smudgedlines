@@ -117,6 +117,18 @@ export const designs = [
     produced: 'Winter 2020',
     style: 'Acid Synth fractal pattern in green/black',
     icon: 'mdi-disc-alert'
+  },
+  {
+    name: 'Polka',
+    icon: 'mdi-dots-hexagon'
+  },
+  {
+    name: 'Ink',
+    icon: 'mdi-water-percent'
+  },
+  {
+    name: 'Purple Haze',
+    icon: 'mdi-cloud'
   }
 ]
 
