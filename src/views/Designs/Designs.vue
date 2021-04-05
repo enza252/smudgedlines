@@ -8,9 +8,9 @@
     </v-row>
     <v-row>
       <template>
-        <v-tabs background-color="green" color="white" icons-and-text fixed-tabs>
+        <v-tabs background-color="green" color="light" icons-and-text fixed-tabs>
           <template v-for="(design, index) in tabHeaders">
-            <v-tab color="white" :key="index">{{ design.name }}
+            <v-tab :key="index">{{ design.name }}
               <v-icon :key="index">{{ design.icon }}</v-icon>
             </v-tab>
           </template>

@@ -104,7 +104,7 @@ export const designs = [
     },
     produced: 'Winter 2020',
     style: 'Funky amoeba geometric pattern in blue',
-    icon: 'mdi-bubble-chart'
+    icon: 'mdi-chart-bubble'
   },
   {
     name: 'Acid Synth',
@@ -116,7 +116,7 @@ export const designs = [
     },
     produced: 'Winter 2020',
     style: 'Acid Synth fractal pattern in green/black',
-    icon: 'mdi-disc-full'
+    icon: 'mdi-disc-alert'
   }
 ]
 
