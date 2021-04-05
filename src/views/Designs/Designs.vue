@@ -28,13 +28,19 @@
           v-for="(design, index) in designs"
           :key="index"
         >
-          <v-container>
-            <v-row class="d-flex flex-column flex-grow-1">
-              <v-card>
-                <v-card-text>{{ design.name }}</v-card-text>
-              </v-card>
-            </v-row>
-          </v-container>
+          <v-carousel
+            cycle
+            height="400"
+            hide-delimiter-background
+            show-arrows-on-hover
+          >
+            <v-carousel-item
+              v-for="(source, i) in design.source"
+              :key="i"
+              :src="source.image"
+            >
+            </v-carousel-item>
+          </v-carousel>
         </v-tab-item>
       </v-tabs-items>
     </v-row>

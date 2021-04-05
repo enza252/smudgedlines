@@ -4,55 +4,55 @@ const productTypes = {
 export const sources = {
   acid_synth: [
     {
-      image: require('../../public/assets/designs/acid-synth/acid-synth-carousel-1450x1088.jpg'),
+      image: '../../public/assets/designs/acid-synth/acid-synth-carousel-1450x1088.jpg',
       alt: 'Acid Synth Print'
     },
     {
-      image: require('../../public/assets/designs/acid-synth/acid-synth-carousel-1450x1088-combined.jpg'),
+      image: '../../public/assets/designs/acid-synth/acid-synth-carousel-1450x1088-combined.jpg',
       alt: 'Acid Synth T-Shirt with Model'
     }
   ],
   amoeba: [
     {
-      image: require('../../public/assets/designs/amoeba/amoeba-carousel-1450x1088.jpg'),
+      image: '../../public/assets/designs/amoeba/amoeba-carousel-1450x1088.jpg',
       alt: 'Amoeba Print'
     },
     {
-      image: require('../../public/assets/designs/amoeba/amoeba-carousel-1450x1088-combined.jpg'),
+      image: '../../public/assets/designs/amoeba/amoeba-carousel-1450x1088-combined.jpg',
       alt: 'Amoeba T-Shirt with Model'
     }
   ],
   rose_fireworks: [
     {
-      image: require('../../public/assets/designs/rose-fireworks/rose-fireworks-carousel-1450x1088.jpg'),
+      image: '../../public/assets/designs/rose-fireworks/rose-fireworks-carousel-1450x1088.jpg',
       alt: 'Rosé Fireworks Print'
     },
     {
-      image: require('../../public/assets/designs/rose-fireworks/rose-fireworks-carousel-1450x1088-combined.jpg'),
+      image: '../../public/assets/designs/rose-fireworks/rose-fireworks-carousel-1450x1088-combined.jpg',
       alt: 'Rosé Fireworks T-Shirt with Model'
     }
   ],
   djibou: [
     {
-      image: require('../../public/assets/designs/djibou/djibou-carousel-1450x1088.jpg'),
+      image: '../../public/assets/designs/djibou/djibou-carousel-1450x1088.jpg',
       alt: 'Djibou Print'
     },
     {
-      image: require('../../public/assets/designs/djibou/djibou-carousel-1450x1088-combined-flipped.jpg'),
+      image: '../../public/assets/designs/djibou/djibou-carousel-1450x1088-combined-flipped.jpg',
       alt: 'Djibou T-Shirt with Model'
     }
   ],
   connection: [
     {
-      image: require('../../public/assets/designs/connection/connection-carousel-1450x1088.jpg'),
+      image: '../../public/assets/designs/connection/connection-carousel-1450x1088.jpg',
       alt: 'Connection Print'
     },
     {
-      image: require('../../public/assets/designs/connection/connection-carousel-1450x1088-combined.jpg'),
+      image: '../../public/assets/designs/connection/connection-carousel-1450x1088-combined.jpg',
       alt: 'Connection T-Shirt with Model'
     },
     {
-      image: require('../../public/assets/designs/connection/connection_carousel_1450x1088-hanging.jpg'),
+      image: '../../public/assets/designs/connection/connection_carousel_1450x1088-hanging.jpg',
       alt: 'Connection T-Shirt with Model'
     }
   ],
