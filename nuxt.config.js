@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - nuxt-sl-demo',
-    title: 'nuxt-sl-demo',
+    titleTemplate: '%s',
+    title: 'Smudged Lines',
     htmlAttrs: {
       lang: 'en'
     },
@@ -48,7 +48,8 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      // dark: true,
+      light: true,
       themes: {
         light: {
           primary: '#3f51b5',
