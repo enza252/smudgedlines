@@ -7,13 +7,13 @@ module.exports = {
     jest: true
   },
   'extends': [
-    'plugin:vue/essential',
     'eslint:recommended',
-    'plugin:vue/recommended'
+    'plugin:vue/essential',
   ],
   'parserOptions': {
     'parser': 'babel-eslint',
-    'sourceType': 'module'
+    'sourceType': 'module',
+    'ecmaVersion': 2018
   },
   'rules': {
     'strict': [2, 'global'],
@@ -41,5 +41,10 @@ module.exports = {
     'prefer-arrow-callback': 2,
     'no-var': 2,
     'comma-spacing': 2,
+    'vue/html-indent': ['error', 2, {
+      'baseIndent': 1,
+      'switchCase': 1,
+      'ignores': []
+    }],
   }
 }

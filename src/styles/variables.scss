@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap');
+
+$font-family:'Hind Siliguri';
+$body-font-family: $font-family, sans-serif !important;
+$heading-font-family: $font-family, sans-serif !important;
+
+// Colours from @/plugins/vuetify.js
+$light: #f8f5f1;
+
+.theme--light.v-application {
+  background: $light !important;
+}
+.v-application {
+  background-color: $light;
+  font-family: $body-font-family, sans-serif !important;
+  .title {
+    font-family: $font-family, sans-serif !important;
+  }
+}
