@@ -16,9 +16,11 @@ module.exports = {
   ],
   transform: {
     '^.+\\.ts$': 'ts-jest',
-    '^.+\\.js$': 'babel-jest',
-    '.*\\.(vue)$': 'vue-jest'
+    '^.+\\.(vue)$': '<rootDir>/node_modules/vue-jest',
+    '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2|pdf)$': '<rootDir>/node_modules/jest-transform-stub',
+    '^.+\\.(cjs|mjs|js|jsx)?$': '<rootDir>/node_modules/babel-jest'
   },
+  setupFilesAfterEnv: ['<rootDir>/testSetup.js'],
   collectCoverage: true,
   collectCoverageFrom: [
     '<rootDir>/components/**/*.vue',

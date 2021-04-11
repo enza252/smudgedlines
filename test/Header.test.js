@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/vue'
 import Vuetify from 'vuetify'
-import Header from '@/views/Header/Header'
+import Header from '@/components/Header'
 
 const options = {
   routes: [],
