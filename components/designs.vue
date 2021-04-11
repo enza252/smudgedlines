@@ -8,7 +8,7 @@
     </v-row>
     <v-row>
       <v-tabs
-        background-color="green"
+        background-color="primary"
         color="light"
         icons-and-text
         fixed-tabs

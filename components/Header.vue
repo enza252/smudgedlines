@@ -1,6 +1,6 @@
 <template>
   <v-app-bar
-    color="green"
+    color="primary"
     style="border-bottom: 1px solid #ffffff !important;"
   >
     <v-app-bar-nav-icon>
