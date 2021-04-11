@@ -1,6 +1,5 @@
 <template>
   <v-footer
-    :absolute="false"
     app
   >
     <v-container style="min-width: 100%">
