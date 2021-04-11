@@ -10,6 +10,10 @@ module.exports = {
     'vue',
     'json'
   ],
+  testMatch: [
+    '<rootDir>/test/*.test.js',
+    '<rootDir>/**/*.test.js',
+  ],
   transform: {
     '^.+\\.ts$': 'ts-jest',
     '^.+\\.js$': 'babel-jest',
