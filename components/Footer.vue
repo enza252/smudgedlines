@@ -3,8 +3,8 @@
     :absolute="false"
     app
   >
-    <v-container>
-      <v-row>
+    <v-container style="min-width: 100%">
+      <v-row justify="end">
         <span>&copy; {{ new Date().getFullYear() }} made with <v-icon>mdi-heart</v-icon> by Smudged Lines</span>
       </v-row>
     </v-container>
