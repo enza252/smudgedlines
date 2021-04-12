@@ -1,25 +1,29 @@
 module.exports = {
-  collectCoverage: true,
-  coverageDirectory: 'coverage',
-  collectCoverageFrom: [
-    '<rootDir>/src/**/*.{js,vue}',
-    '!**/node_modules/**',
-  ],
-  moduleFileExtensions: ['js', 'json', 'jsx', 'node', 'vue'],
-  modulePaths: ['/node_modules'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/$1',
+    '^~/(.*)$': '<rootDir>/$1',
+    '^vue$': 'vue/dist/vue.common.js'
   },
-  setupFilesAfterEnv: ['<rootDir>/testSetup.js'],
-  snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
-  testMatch: [
-    '<rootDir>/src/**/*.test.js',
+  moduleFileExtensions: [
+    'ts',
+    'js',
+    'vue',
+    'json'
   ],
-  testURL: 'http://localhost/',
+  testMatch: [
+    '<rootDir>/test/*.test.js',
+    '<rootDir>/**/*.test.js',
+  ],
   transform: {
+    '^.+\\.ts$': 'ts-jest',
     '^.+\\.(vue)$': '<rootDir>/node_modules/vue-jest',
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2|pdf)$': '<rootDir>/node_modules/jest-transform-stub',
     '^.+\\.(cjs|mjs|js|jsx)?$': '<rootDir>/node_modules/babel-jest'
   },
-  verbose: true
+  setupFilesAfterEnv: ['<rootDir>/testSetup.js'],
+  collectCoverage: true,
+  collectCoverageFrom: [
+    '<rootDir>/components/**/*.vue',
+    '<rootDir>/pages/**/*.vue'
+  ]
 }

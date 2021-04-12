@@ -1,16 +1,13 @@
 module.exports = {
-  env: {
-    dev: {
-      presets: ['@vue/app']
-    },
-    test: {
-      presets: [
+  'env': {
+    'test': {
+      'presets': [
         [
           '@babel/preset-env',
           {
-            useBuiltIns: 'usage',
-            corejs: '3.8.3',
-            targets: { node: 'current' }
+            'useBuiltIns': 'usage',
+            'corejs': '3.8.3',
+            'targets': { 'node': 'current' }
           }
         ]
       ]
