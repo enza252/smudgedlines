@@ -1,6 +1,6 @@
 import Vuetify from 'vuetify'
 import { render, screen } from '@testing-library/vue'
-import Splash from '@/components/Splash'
+import Splash from '~/components/Splash'
 
 const options = {
   routes: [],
