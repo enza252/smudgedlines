@@ -1,7 +1,6 @@
 <template>
   <v-container class="pa-6">
     <v-sheet color="accent" style="padding: 2em" rounded elevation="10">
-
       <v-row>
         <h1 id="designs-header">Designs</h1>
       </v-row>
@@ -52,13 +51,20 @@
 </template>
 <script>
 import { designs } from '@/middleware/designs'
+import { ref } from '@nuxtjs/composition-api'
 export default {
   name: 'Designs',
   data () {
     return {
       tab: null,
-      tabHeaders: designs.map(design => ({ name: design.name, icon: design.icon })),
-      designs: designs
+
+    }
+  },
+  setup () {
+    const tabHeaders = ref(designs.map(design => ({ name: design.name, icon: design.icon })))
+    return {
+      designs,
+      tabHeaders
     }
   }
 }
