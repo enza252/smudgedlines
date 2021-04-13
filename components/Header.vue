@@ -52,7 +52,7 @@ export default {
         buttonText: 'Shop'
       }
     ],
-    slLogoPath: '/logo/sl-icon-white-200x200.png'
+    slLogoPath: '/logo/sl-icon-white-50x50.png'
   }),
 }
 </script>
