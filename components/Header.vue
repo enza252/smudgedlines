@@ -15,7 +15,19 @@
       </template>
     </v-app-bar-title>
     <v-spacer></v-spacer>
-    <div v-for="(button, index) in navBarButtons" :key="index">
+    <template v-if="$vuetify.breakpoint.smAndDown">
+      <div v-for="(button, index) in navBarButtons" :key="index">
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
+              {{ button.buttonText }}
+            </v-btn>
+          </template>
+          <span>{{ button.buttonText }}</span>
+        </v-tooltip>
+      </div>
+    </template>
+    <div v-else v-for="(button, index) in navBarButtons" :key="index">
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
@@ -54,5 +66,10 @@ export default {
     ],
     slLogoPath: '/logo/sl-icon-white-50x50.png'
   }),
+  methods: {
+    log (item) {
+      console.log(item)
+    }
+  }
 }
 </script>
