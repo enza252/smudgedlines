@@ -1,44 +1,50 @@
 <template>
-  <v-app-bar
-    color="primary"
-    style="border-bottom: 1px solid #ffffff !important;"
-  >
-    <v-app-bar-nav-icon>
-      <template v-slot:default>
-        <v-img :src="slLogoPath" max-height="50" max-width="50"/>
-      </template>
-    </v-app-bar-nav-icon>
-
-    <v-app-bar-title>
-      <template v-slot:default>
-        <h3 style="color: white">Smudged Lines</h3>
-      </template>
-    </v-app-bar-title>
-    <v-spacer></v-spacer>
-    <template v-if="$vuetify.breakpoint.smAndDown">
-      <div v-for="(button, index) in navBarButtons" :key="index">
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
-              {{ button.buttonText }}
-            </v-btn>
+  <v-container style="min-width: 100%">
+    <v-row>
+      <v-app-bar
+        color="primary"
+        style="border-bottom: 1px solid #ffffff !important;"
+      >
+        <v-app-bar-nav-icon>
+          <template v-slot:default>
+            <v-img :src="slLogoPath" max-height="50" max-width="50"/>
           </template>
-          <span>{{ button.buttonText }}</span>
-        </v-tooltip>
-      </div>
-    </template>
-    <div v-else v-for="(button, index) in navBarButtons" :key="index">
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
-            {{ button.buttonText }}
-            <v-icon right >{{ button.icon }}</v-icon>
-          </v-btn>
+        </v-app-bar-nav-icon>
+        <v-app-bar-title>
+          <template v-slot:default>
+            <h3 style="color: white">Smudged Lines</h3>
+          </template>
+        </v-app-bar-title>
+        <v-spacer></v-spacer>
+        <template v-if="$vuetify.breakpoint.smAndDown">
+          <template v-for="(button, index) in navBarButtons">
+            <v-tooltip bottom :key="index">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
+                  <v-icon right >{{ button.icon }}</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ button.buttonText }}</span>
+            </v-tooltip>
+          </template>
         </template>
-        <span>{{ button.buttonText }}</span>
-      </v-tooltip>
-    </div>
-  </v-app-bar>
+        <template v-else>
+          <template v-for="(button, index) in navBarButtons">
+            <v-tooltip bottom :key="index">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
+                  {{ button.buttonText }}
+                  <v-icon right >{{ button.icon }}</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ button.buttonText }}</span>
+            </v-tooltip>
+          </template>
+        </template>
+      </v-app-bar>
+    </v-row>
+
+  </v-container>
 </template>
 
 <script>
