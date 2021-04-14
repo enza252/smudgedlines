@@ -72,11 +72,6 @@ export default {
       }
     ],
     slLogoPath: '/logo/sl-icon-white-50x50.png'
-  }),
-  methods: {
-    log (item) {
-      console.log(item)
-    }
-  },
+  })
 }
 </script>
