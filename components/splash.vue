@@ -11,10 +11,12 @@
   </v-parallax>
 </template>
 <script>
-export default {
+import { defineComponent } from '@nuxtjs/composition-api'
+
+export default defineComponent({
   name: 'Splash',
   data: () => ({
     imgPath: '/img/bg-acid-synth.png'
   })
-}
+})
 </script>

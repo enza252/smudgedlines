@@ -49,8 +49,10 @@
   </v-container>
 </template>
 <script>
+import { defineComponent } from '@nuxtjs/composition-api'
+
 import { designs } from '@/middleware/designs'
-export default {
+export default defineComponent({
   name: 'Designs',
   data () {
     return {
@@ -59,5 +61,5 @@ export default {
       designs: designs
     }
   }
-}
+})
 </script>

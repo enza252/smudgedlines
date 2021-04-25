@@ -30,8 +30,10 @@
 </template>
 
 <script>
+import { defineComponent } from '@nuxtjs/composition-api'
+
 import { mdiTshirtCrewOutline, mdiInformationOutline, mdiHeartOutline, mdiCartOutline } from '@mdi/js'
-export default {
+export default defineComponent({
   name: 'Header',
   data: () => ({
     navBarButtons: [
@@ -54,5 +56,5 @@ export default {
     ],
     slLogoPath: '/logo/sl-icon-white-200x200.png'
   }),
-}
+})
 </script>
