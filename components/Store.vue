@@ -18,7 +18,8 @@
             <v-card>
               <v-card-title>Smudged Lines Store</v-card-title>
               <v-card-text>
-                <v-img :src="slLogoColoured" height="100px" width="100px" style="justify-content: center"/>
+                <v-img :src="slLogoColoured" height="100px" width="100px" style="justify-content: center">
+                </v-img>
               </v-card-text>
             </v-card>
           </v-col>
