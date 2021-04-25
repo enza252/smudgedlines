@@ -7,6 +7,7 @@
       <v-sheet width="95%" rounded elevation="12" class="main" style="margin-top: -5rem; z-index: 1">
         <Designs/>
         <Care/>
+        <About/>
       </v-sheet>
     </v-row>
   </v-container>
