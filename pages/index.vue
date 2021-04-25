@@ -8,6 +8,7 @@
         <Designs/>
         <Care/>
         <About/>
+        <Store/>
       </v-sheet>
     </v-row>
   </v-container>
