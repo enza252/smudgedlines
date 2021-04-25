@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-row>
-      <h1 style="margin-left: 1em" id="care-header">Care</h1>
+    <v-row class="ml-2">
+      <h1 id="care-header">Care</h1>
     </v-row>
     <v-row>
       <template v-for="(card, i) in cards">
