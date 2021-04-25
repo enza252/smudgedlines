@@ -45,7 +45,7 @@ export default {
       },
       {
         icon: mdiInformationOutline,
-        buttonText: 'About Us'
+        buttonText: 'About'
       },
       {
         icon: mdiCartOutline,
