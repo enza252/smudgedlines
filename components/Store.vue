@@ -5,11 +5,11 @@
     </v-row>
     <v-row>
       <v-sheet min-width="100%" color="accent" class="pa-6" rounded elevation="10">
-        <v-row >
+        <v-row align="center">
           <v-col>
-            <v-card style="max-height: 100%">
+            <v-card>
               <v-card-title>Depop</v-card-title>
-              <v-card-text class="pl-3">
+              <v-card-text :class="mobile ? 'pl-3' : 'pl-5'">
                 <v-img :src="depopSVG" max-width="300px" max-height="150px"/>
               </v-card-text>
             </v-card>
@@ -18,7 +18,7 @@
             <v-card>
               <v-card-title>Smudged Lines Store</v-card-title>
               <v-card-text>
-                <v-img :src="slLogoColoured" height="100px" width="100px" style="justify-content: center">
+                <v-img :src="slLogoColoured" height="80px" width="80px" style="justify-content: center">
                 </v-img>
               </v-card-text>
             </v-card>
@@ -39,6 +39,11 @@ export default defineComponent({
     return {
       depopSVG: '/socials/depop_logo.svg',
       slLogoColoured: '/logo/sl-colour-150x150.png'
+    }
+  },
+  computed: {
+    mobile () {
+      return this.$vuetify.breakpoint.smAndDown
     }
   }
 })
