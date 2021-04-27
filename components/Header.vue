@@ -18,7 +18,7 @@
     <div v-for="(button, index) in navBarButtons" :key="index">
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="$vuetify.goTo(`#${button.id}-header`)">
+          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="goToSection(button.id)">
             {{ button.buttonText }}
             <v-icon right >{{ button.icon }}</v-icon>
           </v-btn>
@@ -60,5 +60,10 @@ export default defineComponent({
     ],
     slLogoPath: '/logo/sl-icon-white-200x200.png'
   }),
+  methods: {
+    goToSection(id) {
+      this.$vuetify.goTo(`#${id}-header`)
+    }
+  }
 })
 </script>
