@@ -7,11 +7,11 @@
       <template v-for="(card, i) in cards">
         <v-col :key="i">
           <v-card color="accent" rounded elevation="10" min-height="100%">
-            <v-card-title style="justify-content: center">
+            <v-card-title class="justify-center">
               {{ card.title }}
               <v-icon v-if="card.icon" right >{{ card.icon }}</v-icon>
             </v-card-title>
-            <v-card-text style="text-align: center">
+            <v-card-text class="justify-center">
               {{ card.content }}
             </v-card-text>
           </v-card>
