@@ -18,7 +18,7 @@
     <div v-for="(button, index) in navBarButtons" :key="index">
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
+          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="goToSection(button.id)">
             {{ button.buttonText }}
             <v-icon right >{{ button.icon }}</v-icon>
           </v-btn>
@@ -30,29 +30,40 @@
 </template>
 
 <script>
+import { defineComponent } from '@nuxtjs/composition-api'
+
 import { mdiTshirtCrewOutline, mdiInformationOutline, mdiHeartOutline, mdiCartOutline } from '@mdi/js'
-export default {
+export default defineComponent({
   name: 'Header',
   data: () => ({
     navBarButtons: [
       {
         icon: mdiTshirtCrewOutline,
-        buttonText: 'Designs'
+        buttonText: 'Designs',
+        id: 'designs'
       },
       {
         icon: mdiHeartOutline,
-        buttonText: 'Care'
+        buttonText: 'Care',
+        id: 'care'
       },
       {
         icon: mdiInformationOutline,
-        buttonText: 'About Us'
+        buttonText: 'About',
+        id: 'about'
       },
       {
         icon: mdiCartOutline,
-        buttonText: 'Shop'
+        buttonText: 'Store',
+        id: 'store'
       }
     ],
     slLogoPath: '/logo/sl-icon-white-200x200.png'
   }),
-}
+  methods: {
+    goToSection(id) {
+      this.$vuetify.goTo(`#${id}-header`)
+    }
+  }
+})
 </script>

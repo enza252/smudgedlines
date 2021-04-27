@@ -6,16 +6,20 @@
     <v-row class="d-flex flex-column flex-grow-1" justify="center" align="center">
       <v-sheet width="95%" rounded elevation="12" class="main" style="margin-top: -5rem; z-index: 1">
         <Designs/>
+        <Care/>
+        <About/>
+        <Store/>
       </v-sheet>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import { defineComponent } from '@nuxtjs/composition-api'
 
-export default {
+export default defineComponent({
   name: 'Index',
-}
+})
 </script>
 
 <style>

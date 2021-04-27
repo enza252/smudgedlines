@@ -7,7 +7,7 @@ const options = {
   vuetify: new Vuetify()
 }
 
-const tagLine = 'Handcrafted designs from locally sourced & produced fabric.'
+const tagLine = 'Vibrant t-shirts for any occasion, responsibly sourced and made with'
 const header = 'Smudged Lines'
 
 describe('tests the Splash view renders', () => {
