@@ -9,17 +9,16 @@
           <v-col>
             <v-card>
               <v-card-title>Depop</v-card-title>
-              <v-card-text :class="mobile ? 'pl-3' : 'pl-5'">
-                <v-img :src="depopSVG" max-width="300px" max-height="150px"/>
+              <v-card-text class="justify-center">
+                <v-img :src="depopSVG" max-width="300px" max-height="150px" class="mx-auto"/>
               </v-card-text>
             </v-card>
           </v-col>
           <v-col>
-            <v-card>
+            <v-card >
               <v-card-title>Smudged Lines Store</v-card-title>
-              <v-card-text>
-                <v-img :src="slLogoColoured" height="80px" width="80px" style="justify-content: center">
-                </v-img>
+              <v-card-text class="justify-center">
+                <v-img :src="slLogoColoured" height="80px" width="80px" class="mx-auto"/>
               </v-card-text>
             </v-card>
           </v-col>
