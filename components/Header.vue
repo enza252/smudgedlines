@@ -18,7 +18,7 @@
     <div v-for="(button, index) in navBarButtons" :key="index">
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs">
+          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="$vuetify.goTo(`#${button.id}-header`)">
             {{ button.buttonText }}
             <v-icon right >{{ button.icon }}</v-icon>
           </v-btn>
@@ -39,19 +39,23 @@ export default defineComponent({
     navBarButtons: [
       {
         icon: mdiTshirtCrewOutline,
-        buttonText: 'Designs'
+        buttonText: 'Designs',
+        id: 'designs'
       },
       {
         icon: mdiHeartOutline,
-        buttonText: 'Care'
+        buttonText: 'Care',
+        id: 'care'
       },
       {
         icon: mdiInformationOutline,
-        buttonText: 'About'
+        buttonText: 'About',
+        id: 'about'
       },
       {
         icon: mdiCartOutline,
-        buttonText: 'Shop'
+        buttonText: 'Store',
+        id: 'store'
       }
     ],
     slLogoPath: '/logo/sl-icon-white-200x200.png'

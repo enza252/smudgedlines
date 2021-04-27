@@ -17,6 +17,6 @@ describe('Tests the Header view is rendered correctly', () => {
     expect(screen.getByText('Designs')).toBeInTheDocument()
     expect(screen.getByText('Care')).toBeInTheDocument()
     expect(screen.getByText('About')).toBeInTheDocument()
-    expect(screen.getByText('Shop')).toBeInTheDocument()
+    expect(screen.getByText('Store')).toBeInTheDocument()
   })
 })
