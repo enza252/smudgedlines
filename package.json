@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "jest"
   },
+  "config" : {
+    "build": "nuxt build"
+  },  
   "dependencies": {
     "@nuxtjs/composition-api": "^0.23.0",
     "core-js": "^3.9.1",

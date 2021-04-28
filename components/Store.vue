@@ -8,15 +8,19 @@
         <v-row align="center">
           <v-col>
             <v-card>
-              <v-card-title>Depop</v-card-title>
+              <v-card-title>Find us on Depop</v-card-title>
               <v-card-text class="justify-center">
-                <v-img :src="depopSVG" max-width="300px" max-height="150px" class="mx-auto"/>
+
+                <a href="https://www.depop.com/smudgedlines/">
+                  <v-img :src="depopSVG" max-width="300px" max-height="150px" class="mx-auto"/>
+                </a>
+
               </v-card-text>
             </v-card>
           </v-col>
           <v-col>
             <v-card >
-              <v-card-title>Smudged Lines Store</v-card-title>
+              <v-card-title>Visit the Smudged Lines Store</v-card-title>
               <v-card-text class="justify-center">
                 <v-img :src="slLogoColoured" height="80px" width="80px" class="mx-auto"/>
               </v-card-text>
