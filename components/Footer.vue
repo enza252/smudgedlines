@@ -5,14 +5,17 @@
     <v-container style="min-width: 100%">
       <v-row>
         <v-col cols="6" class="pa-0">
-          <span v-for="(logo, index) in logos" :key="index">
+          <span v-for="(social, index) in socials" :key="index">
             <v-tooltip top>
               <template v-slot:activator="{ on, attrs }">
-                <v-icon v-on="on" v-bind="attrs" class="pa-1">
-                  {{logo.icon}}
-                </v-icon>
+                <a :href="social.url">
+                  <!-- <v-img v-if="social.img" :src="social.img" height="24" max-height="24" width="24" v-on="on" v-bind="attrs" :class="social.padding"/> -->
+                  <v-icon v-on="on" v-bind="attrs" :class="social.padding">
+                    {{social.icon}}
+                  </v-icon>
+                </a>
               </template>
-              {{logo.tooltipText}}
+              {{social.tooltipText}}
             </v-tooltip>
           </span>
         </v-col>
@@ -27,17 +30,31 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 import { mdiInstagram, mdiFacebook } from '@mdi/js'
 
+const pa0 = 'pa-0'
+const pl3 = 'pl-3'
+
 export default defineComponent({
   name: 'Footer',
   data: () => ({
-    logos: [{
+    socials: [{
       icon: mdiInstagram,
-      tooltipText: 'Instagram'
+      tooltipText: 'Instagram',
+      url: 'https://www.instagram.com/smudgedlines/',
+      padding: pa0
     },
     {
       icon: mdiFacebook,
-      tooltipText: 'Facebook'
-    }]
+      tooltipText: 'Facebook',
+      url: 'https://www.facebook.com/smudgedlinesfb',
+      padding: pl3
+    },
+    {
+      img: '/socials/depop-logo-transparent.png',
+      tooltipText: 'Depop',
+      url: 'https://www.depop.com/smudgedlines/',
+      padding: pl3
+    }
+    ]
   })
 })
 </script>
