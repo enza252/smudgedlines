@@ -61,7 +61,7 @@ export default defineComponent({
     slLogoPath: '/logo/sl-icon-white-200x200.png'
   }),
   methods: {
-    goToSection(id) {
+    goToSection (id) {
       this.$vuetify.goTo(`#${id}-header`)
     }
   }
