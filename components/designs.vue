@@ -6,7 +6,7 @@
     <v-row class="ml-1 mb-1">
       <h4 id="designs-subheader">View our designs and Tees</h4>
     </v-row>
-    <v-sheet color="accent" class="pa-6" rounded elevation="10">
+    <v-sheet color="accent" class="pa-6" rounded elevation="10" style="min-height: 500px !important">
       <v-row>
         <v-tabs
           background-color="primary"
