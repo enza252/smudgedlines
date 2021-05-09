@@ -5,55 +5,69 @@ export const sources = {
   acid_synth: [
     {
       image: '/designs/acid-synth/acid-synth-carousel-1450x1088.jpg',
-      alt: 'Acid Synth Print'
+      alt: 'Acid Synth Print',
+      mobile: true
     },
     {
       image: '/designs/acid-synth/acid-synth-carousel-1450x1088-combined.jpg',
-      alt: 'Acid Synth T-Shirt with Model'
+      alt: 'Acid Synth T-Shirt with Model',
+      mobile: false
     }
   ],
   amoeba: [
     {
       image: '/designs/amoeba/amoeba-carousel-1450x1088.jpg',
-      alt: 'Amoeba Print'
+      alt: 'Amoeba Print',
+      mobile: true
     },
     {
       image: '/designs/amoeba/amoeba-carousel-1450x1088-combined.jpg',
-      alt: 'Amoeba T-Shirt with Model'
+      alt: 'Amoeba T-Shirt with Model',
+      mobile: false
     }
   ],
   rose_fireworks: [
     {
       image: '/designs/rose-fireworks/rose-fireworks-carousel-1450x1088.jpg',
-      alt: 'Rosé Fireworks Print'
+      alt: 'Rosé Fireworks Print',
+      mobile: true
+
     },
     {
       image: '/designs/rose-fireworks/rose-fireworks-carousel-1450x1088-combined.jpg',
-      alt: 'Rosé Fireworks T-Shirt with Model'
+      alt: 'Rosé Fireworks T-Shirt with Model',
+      mobile: false
     }
   ],
   djibou: [
     {
       image: '/designs/djibou/djibou-carousel-1450x1088.jpg',
-      alt: 'Djibou Print'
+      alt: 'Djibou Print',
+      mobile: true
+
     },
     {
       image: '/designs/djibou/djibou-carousel-1450x1088-combined-flipped.jpg',
-      alt: 'Djibou T-Shirt with Model'
+      alt: 'Djibou T-Shirt with Model',
+      mobile: false
+
     }
   ],
   connection: [
     {
       image: '/designs/connection/connection-carousel-1450x1088.jpg',
-      alt: 'Connection Print'
+      alt: 'Connection Print',
+      mobile: true
     },
     {
       image: '/designs/connection/connection-carousel-1450x1088-combined.jpg',
-      alt: 'Connection T-Shirt with Model'
+      alt: 'Connection T-Shirt with Model',
+      mobile: false
     },
     {
       image: '/designs/connection/connection_carousel_1450x1088-hanging.jpg',
-      alt: 'Connection T-Shirt with Model'
+      alt: 'Connection T-Shirt hanging on a rail',
+      mobile: true
     }
   ],
 }

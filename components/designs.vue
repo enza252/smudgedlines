@@ -6,7 +6,7 @@
     <v-row class="ml-1 mb-1">
       <h4 id="designs-subheader">View our designs and Tees</h4>
     </v-row>
-    <v-sheet color="accent" class="pa-6" rounded elevation="10" :style="`min-height: ${mobile ? 550: 600}px !important`">
+    <v-sheet color="accent" class="pa-6" rounded elevation="10" :style="`min-height: ${mobile() ? 550: 600}px !important`">
       <v-row>
         <v-tabs
           background-color="primary"
@@ -35,12 +35,15 @@
               hide-delimiter-background
               show-arrows-on-hover
             >
-              <v-carousel-item
-                v-for="(source, i) in design.source"
-                :key="i"
-                :src="source.image"
-              >
-              </v-carousel-item>
+              <template v-for="(source, i) in design.source">
+                <v-carousel-item
+
+                  :key="i"
+                  :src="source.image"
+                  v-if="source.mobile || (!source.mobile && (!mobile() || !xlMobile() ))"
+                >
+                </v-carousel-item>
+              </template>
             </v-carousel>
           </v-tab-item>
         </v-tabs-items>
@@ -66,9 +69,12 @@ export default defineComponent({
       designs: designs
     }
   },
-  computed: {
+  methods: {
     mobile () {
       return this.$vuetify.breakpoint.xsAndDown
+    },
+    xlMobile () {
+      return this.$vuetify.breakpoint.mdAndDown
     },
     getViewportHeight () {
       if (this.$vuetify.breakpoint.xsAndDown) {
