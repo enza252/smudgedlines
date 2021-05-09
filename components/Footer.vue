@@ -36,13 +36,9 @@
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
 import { mdiInstagram } from '@mdi/js'
-import depopLogo from '/static/socials/depop-logo-transparent-24x24.svg'
 
 export default defineComponent({
   name: 'Footer',
-  components: {
-    depopLogo
-  },
   data: () => ({
     socials: [{
       icon: mdiInstagram,
@@ -65,7 +61,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="sass">
-
-</style>
