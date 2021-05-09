@@ -6,7 +6,7 @@
     <v-row class="ml-1 mb-1">
       <h4 id="designs-subheader">View our designs and Tees</h4>
     </v-row>
-    <v-sheet color="accent" class="pa-6" rounded elevation="10" style="min-height: 600px !important">
+    <v-sheet color="accent" class="pa-6" rounded elevation="10" :style="`min-height: ${mobile ? 550: 600}px !important`">
       <v-row>
         <v-tabs
           background-color="primary"
@@ -67,6 +67,9 @@ export default defineComponent({
     }
   },
   computed: {
+    mobile () {
+      return this.$vuetify.breakpoint.xsAndDown
+    },
     getViewportHeight () {
       if (this.$vuetify.breakpoint.xsAndDown) {
         return '548'
