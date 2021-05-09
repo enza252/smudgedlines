@@ -3,7 +3,7 @@
     app
     class="pb-0"
   >
-    <v-container style="width: 100%">
+    <v-container style="min-width: 100%">
       <v-row>
         <v-col cols="5" class="pl-2 pt-0 pb-0" style="height: 26px !important;">
           <template v-for="(social, index) in socials">
