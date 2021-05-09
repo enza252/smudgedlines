@@ -1,23 +1,24 @@
 <template>
   <v-footer
     app
+    class="pb-0"
   >
-    <v-container style="min-width: 100%">
+    <v-container style="width: 100%">
       <v-row>
-        <v-col cols="5" class="pl-2 pt-0 pb-0">
+        <v-col cols="5" class="pl-2 pt-0 pb-0" style="height: 26px !important;">
           <template v-for="(social, index) in socials">
             <v-tooltip top :key="index">
               <template v-slot:activator="{ on, attrs }">
                 <a :href="social.url">
-                  <v-icon  v-if="social.icon" v-on="on" v-bind="attrs" >
+                  <v-icon  v-if="social.icon" v-on="on" v-bind="attrs" style="margin-bottom: 12px !important;">
                     {{social.icon}}
                   </v-icon>
-                  <span v-else class="pl-1 pt-4" >
-                    <v-img :src="social.img" height="24" width="24" v-on="on" v-bind="attrs" :class="social.classes"/>
-                  </span>
+
+                  <v-img v-else :src="social.img" height="22" width="22" v-on="on" v-bind="attrs" :class="social.classes"/>
+
                 </a>
               </template>
-              {{social.tooltipText}}
+              Visit our {{social.tooltipText}} Page
             </v-tooltip>
 
           </template>
@@ -34,12 +35,8 @@
 </template>
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
-import { mdiInstagram, mdiFacebook } from '@mdi/js'
+import { mdiInstagram } from '@mdi/js'
 import depopLogo from '/static/socials/depop-logo-transparent-24x24.svg'
-
-const pa0 = 'pa-0'
-const pl3 = 'pl-3'
-const pl6 = 'pl-6'
 
 export default defineComponent({
   name: 'Footer',
@@ -51,19 +48,13 @@ export default defineComponent({
       icon: mdiInstagram,
       tooltipText: 'Instagram',
       url: 'https://www.instagram.com/smudgedlines/',
-      classes: pa0
-    },
-    {
-      icon: mdiFacebook,
-      tooltipText: 'Facebook',
-      url: 'https://www.facebook.com/smudgedlinesfb',
-      classes: pl3
+      classes: 'pr-2'
     },
     {
       img: '/socials/depop-logo-transparent.png',
       tooltipText: 'Depop',
       url: 'https://www.depop.com/smudgedlines/',
-      classes: 'd-inline-flex flex-grow-1'
+      classes: 'd-inline-flex flex-grow-1 align-end align-self-end align-content-end pl-2'
     }
     ]
   }),
