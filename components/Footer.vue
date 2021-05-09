@@ -1,7 +1,7 @@
 <template>
   <v-footer
     app
-    class="pb-0"
+    class="pb-0 pl-0"
   >
     <v-container style="min-width: 100%">
       <v-row>
