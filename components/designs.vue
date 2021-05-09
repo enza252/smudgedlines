@@ -1,12 +1,12 @@
 <template>
-  <v-container class="pa-6">
+  <v-container class="pa-6" style="min-height: 500px !important">
     <v-row class="ml-1">
       <h1 id="designs-header">Designs</h1>
     </v-row>
     <v-row class="ml-1 mb-1">
       <h4 id="designs-subheader">View our designs and Tees</h4>
     </v-row>
-    <v-sheet color="accent" class="pa-6" rounded elevation="10" style="min-height: 500px !important">
+    <v-sheet color="accent" class="pa-6" rounded elevation="10" style="min-height: 600px !important">
       <v-row>
         <v-tabs
           background-color="primary"
@@ -52,6 +52,11 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 import { designs } from '@/middleware/designs'
+
+// ToDo in here
+//  - lazy loaded version of each design to show some blurred image for UX
+//  - include new designs
+
 export default defineComponent({
   name: 'Designs',
   data () {
@@ -64,7 +69,7 @@ export default defineComponent({
   computed: {
     getViewportHeight () {
       if (this.$vuetify.breakpoint.xsAndDown) {
-        return '550'
+        return '548'
       }
       if (this.$vuetify.breakpoint.smAndUp) {
         return '650'
