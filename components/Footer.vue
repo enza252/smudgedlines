@@ -10,7 +10,7 @@
             <v-tooltip top :key="index">
               <template v-slot:activator="{ on, attrs }">
                 <a :href="social.url">
-                  <v-icon  v-if="social.icon" v-on="on" v-bind="attrs" style="margin-bottom: 12px !important;">
+                  <v-icon  v-if="social.icon" v-on="on" v-bind="attrs" style="margin-bottom: 12px !important;" :class="social.classes">
                     {{social.icon}}
                   </v-icon>
 

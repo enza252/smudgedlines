@@ -31,7 +31,7 @@
           >
             <v-carousel
               cycle
-              height="400"
+              :height="getHeight"
               hide-delimiter-background
               show-arrows-on-hover
             >
@@ -59,6 +59,25 @@ export default defineComponent({
       tab: null,
       tabHeaders: designs.map(design => ({ name: design.name, icon: design.icon })),
       designs: designs
+    }
+  },
+  computed: {
+    getViewportHeight () {
+      if (this.$vuetify.breakpoint.xsAndDown) {
+        return '550'
+      }
+      if (this.$vuetify.breakpoint.smAndUp) {
+        return '650'
+      }
+      if (this.$vuetify.breakpoint.mdAndUp) {
+        return '850'
+      }
+      if (this.$vuetify.breakpoint.lgAndUp) {
+        return '950'
+      }
+      if (this.$vuetify.breakpoint.xlAndUp) {
+        return '1150'
+      }
     }
   }
 })
