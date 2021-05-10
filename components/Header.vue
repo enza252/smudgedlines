@@ -8,7 +8,7 @@
         <v-img :src="slLogoPath" max-height="50" max-width="50"/>
       </template>
     </v-app-bar-nav-icon>
-
+    <!-- ToDo mobile burger bar -->
     <v-app-bar-title>
       <template v-slot:default>
         <h3 style="color: white">Smudged Lines</h3>

@@ -43,11 +43,6 @@ export default defineComponent({
       depopSVG: '/socials/depop_logo.svg',
       slLogoColoured: '/logo/sl-colour-150x150.png'
     }
-  },
-  computed: {
-    mobile () {
-      return this.$vuetify.breakpoint.smAndDown
-    }
   }
 })
 </script>
