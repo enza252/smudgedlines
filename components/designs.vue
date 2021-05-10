@@ -60,9 +60,6 @@ import { designs } from '@/middleware/designs'
 //  - lazy loaded version of each design to show some blurred image for UX
 //  - include new designs
 
-// toDo in general
-// fix console warnings
-
 export default defineComponent({
   name: 'Designs',
   data () {
