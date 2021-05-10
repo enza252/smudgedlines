@@ -42,7 +42,6 @@
                   :src="source.image"
                   v-if="source.mobile || !(!source.mobile && (mobile || xlMobile))"
                 >
-                <!-- || (!source.mobile && (!mobile || !xlMobile )) -->
                 </v-carousel-item>
               </template>
             </v-carousel>
