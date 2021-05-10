@@ -37,10 +37,9 @@
             >
               <template v-for="(source, i) in design.source">
                 <v-carousel-item
-
                   :key="i"
                   :src="source.image"
-                  v-if="source.mobile || !(!source.mobile && (mobile || xlMobile))"
+                  v-if="doRenderOnDevice(source.mobile)"
                 >
                 </v-carousel-item>
               </template>
@@ -78,7 +77,7 @@ export default defineComponent({
     },
     getViewportHeight () {
       if (this.$vuetify.breakpoint.xsAndDown) {
-        return '548'
+        return '450'
       }
       if (this.$vuetify.breakpoint.smAndUp) {
         return '650'
@@ -93,6 +92,11 @@ export default defineComponent({
         return '1150'
       }
     }
+  },
+  methods: {
+    doRenderOnDevice (isImageMobileCompatible) {
+      return isImageMobileCompatible || !(!isImageMobileCompatible && (this.mobile || this.xlMobile))
+    },
   }
 })
 </script>
