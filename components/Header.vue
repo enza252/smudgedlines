@@ -8,15 +8,17 @@
         <v-img :src="slLogoPath" max-height="50" max-width="50"/>
       </template>
     </v-app-bar-nav-icon>
-    <!-- ToDo mobile burger bar -->
+
     <v-app-bar-title>
       <template v-slot:default>
         <h3 style="color: white">Smudged Lines</h3>
       </template>
     </v-app-bar-title>
+
     <v-spacer></v-spacer>
-    <div v-for="(button, index) in navBarButtons" :key="index">
-      <v-tooltip bottom>
+
+    <template v-if="!mobile()">
+      <v-tooltip bottom v-for="(button, index) in navBarButtons" :key="index">
         <template v-slot:activator="{ on, attrs }">
           <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="goToSection(button.id)">
             {{ button.buttonText }}
@@ -25,7 +27,37 @@
         </template>
         <span>{{ button.buttonText }}</span>
       </v-tooltip>
-    </div>
+    </template>
+    <v-btn v-if="mobile()" @click="toggleDrawer" color="primary" elevation="false">
+      <v-icon>
+        mdi-menu
+      </v-icon>
+    </v-btn>
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      absolute
+      bottom>
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+
+          active-class="deep-purple--text text--accent-4"
+        >
+          <template v-for="(button, index) in navBarButtons">
+            <v-list-item :key="index" @click="goToSection(button.id)">
+              <v-list-item-icon>
+                <v-icon left >{{ button.icon }}</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>{{button.buttonText }}</v-list-item-title>
+            </v-list-item>
+          </template>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+
   </v-app-bar>
 </template>
 
@@ -58,11 +90,18 @@ export default defineComponent({
         id: 'store'
       }
     ],
-    slLogoPath: '/logo/sl-icon-white-200x200.png'
+    slLogoPath: '/logo/sl-icon-white-200x200.png',
+    drawer: false
   }),
   methods: {
     goToSection (id) {
       this.$vuetify.goTo(`#${id}-header`)
+    },
+    mobile () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    toggleDrawer () {
+      this.drawer = !this.drawer
     }
   }
 })
