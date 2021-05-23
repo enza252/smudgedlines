@@ -1,43 +1,47 @@
 <template>
-  <v-app-bar
-    color="primary"
-    style="border-bottom: 1px solid #ffffff !important;"
-  >
-    <v-app-bar-nav-icon>
-      <template v-slot:default>
-        <v-img :src="slLogoPath" max-height="50" max-width="50"/>
-      </template>
-    </v-app-bar-nav-icon>
-
-    <v-app-bar-title>
-      <template v-slot:default>
-        <h3 style="color: white">Smudged Lines</h3>
-      </template>
-    </v-app-bar-title>
-
-    <v-spacer></v-spacer>
-
-    <template v-if="!mobile()">
-      <v-tooltip bottom v-for="(button, index) in navBarButtons" :key="index">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="goToSection(button.id)">
-            {{ button.buttonText }}
-            <v-icon right >{{ button.icon }}</v-icon>
-          </v-btn>
+  <v-container class="pa-0" fluid>
+    <v-app-bar
+      color="primary"
+      style="border-bottom: 1px solid #ffffff !important;"
+    >
+      <v-app-bar-nav-icon>
+        <template v-slot:default>
+          <v-img :src="slLogoPath" max-height="50" max-width="50"/>
         </template>
-        <span>{{ button.buttonText }}</span>
-      </v-tooltip>
-    </template>
-    <v-btn v-if="mobile()" @click="toggleDrawer" color="primary" elevation="false">
-      <v-icon>
-        mdi-menu
-      </v-icon>
-    </v-btn>
+      </v-app-bar-nav-icon>
+
+      <v-app-bar-title>
+        <template v-slot:default>
+          <h3 style="color: white">Smudged Lines</h3>
+        </template>
+      </v-app-bar-title>
+
+      <v-spacer></v-spacer>
+
+      <template v-if="!mobile">
+        <v-tooltip bottom v-for="(button, index) in navBarButtons" :key="index">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="goToSection(button.id)">
+              {{ button.buttonText }}
+              <v-icon right >{{ button.icon }}</v-icon>
+            </v-btn>
+          </template>
+          <span>{{ button.buttonText }}</span>
+        </v-tooltip>
+      </template>
+
+      <v-btn v-if="mobile" @click="toggleDrawer" color="primary" elevation="false">
+        <v-icon>
+          mdi-menu
+        </v-icon>
+      </v-btn>
+    </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
       temporary
       absolute
-      bottom>
+      right
+    >
       <v-list
         nav
         dense
@@ -57,8 +61,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-
-  </v-app-bar>
+  </v-container>
 </template>
 
 <script>
@@ -75,6 +78,11 @@ export default defineComponent({
         id: 'designs'
       },
       {
+        icon: mdiCartOutline,
+        buttonText: 'Store',
+        id: 'store'
+      },
+      {
         icon: mdiHeartOutline,
         buttonText: 'Care',
         id: 'care'
@@ -83,11 +91,6 @@ export default defineComponent({
         icon: mdiInformationOutline,
         buttonText: 'About',
         id: 'about'
-      },
-      {
-        icon: mdiCartOutline,
-        buttonText: 'Store',
-        id: 'store'
       }
     ],
     slLogoPath: '/logo/sl-icon-white-200x200.png',
@@ -96,6 +99,7 @@ export default defineComponent({
   methods: {
     goToSection (id) {
       this.$vuetify.goTo(`#${id}-header`)
+      this.toggleDrawer()
     },
     mobile () {
       return this.$vuetify.breakpoint.smAndDown
