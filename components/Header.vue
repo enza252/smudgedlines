@@ -41,6 +41,7 @@
         v-model="drawer"
         absolute
         right
+        styile="z-index: 10 !important"
       >
         <v-list
           nav
@@ -122,3 +123,8 @@ export default defineComponent({
   }
 })
 </script>
+<style>
+.v-navigation-drawer--absolute {
+  z-index: 3 !important;
+}
+</style>
