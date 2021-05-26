@@ -18,7 +18,7 @@
 
       <v-spacer></v-spacer>
 
-      <template v-if="!mobile">
+      <template v-if="!mobile()">
         <v-tooltip bottom v-for="(button, index) in navBarButtons" :key="index">
           <template v-slot:activator="{ on, attrs }">
             <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="goToSection(button.id)">
@@ -30,37 +30,38 @@
         </v-tooltip>
       </template>
 
-      <v-btn v-if="mobile" @click="toggleDrawer" color="primary" elevation="false">
+      <v-btn v-if="mobile()" @click="toggleDrawer" color="primary" elevation="false">
         <v-icon>
           mdi-menu
         </v-icon>
       </v-btn>
     </v-app-bar>
-    <v-navigation-drawer
-      v-model="drawer"
-      temporary
-      absolute
-      right
-    >
-      <v-list
-        nav
-        dense
+    <template v-if="drawer">
+      <v-navigation-drawer
+        v-model="drawer"
+        absolute
+        right
       >
-        <v-list-item-group
-
-          active-class="deep-purple--text text--accent-4"
+        <v-list
+          nav
+          dense
         >
-          <template v-for="(button, index) in navBarButtons">
-            <v-list-item :key="index" @click="goToSection(button.id)">
-              <v-list-item-icon>
-                <v-icon left >{{ button.icon }}</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>{{button.buttonText }}</v-list-item-title>
-            </v-list-item>
-          </template>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
+          <v-list-item-group
+
+            active-class="deep-purple--text text--accent-4"
+          >
+            <template v-for="(button, index) in navBarButtons">
+              <v-list-item :key="index" @click="goToSection(button.id)">
+                <v-list-item-icon>
+                  <v-icon left >{{ button.icon }}</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>{{ button.buttonText }}</v-list-item-title>
+              </v-list-item>
+            </template>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
+    </template>
   </v-container>
 </template>
 
@@ -71,6 +72,7 @@ import { mdiTshirtCrewOutline, mdiInformationOutline, mdiHeartOutline, mdiCartOu
 export default defineComponent({
   name: 'Header',
   data: () => ({
+    isHydrated: false,
     navBarButtons: [
       {
         icon: mdiTshirtCrewOutline,
@@ -96,13 +98,23 @@ export default defineComponent({
     slLogoPath: '/logo/sl-icon-white-200x200.png',
     drawer: false
   }),
+  computed: {
+    breakpoint () { // just an example, could be one specific value if that's all you need
+      return this.isHydrated
+        ? this.$vuetify.breakpoint.smAndDown
+        : undefined// "empty" $breakpoint object with initial values
+    }
+  },
+  mounted () {
+    this.isHydrated = true
+  },
   methods: {
+    mobile () {
+      return this.isHydrated && this.$vuetify.breakpoint.smAndDown
+    },
     goToSection (id) {
       this.$vuetify.goTo(`#${id}-header`)
-      this.toggleDrawer()
-    },
-    mobile () {
-      return this.$vuetify.breakpoint.smAndDown
+      this.drawer = false
     },
     toggleDrawer () {
       this.drawer = !this.drawer
