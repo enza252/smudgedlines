@@ -66,7 +66,7 @@
 
                 <v-list-item>
                   <v-list-item-content>
-                    1 more (handcrafted with care?)
+                    Handcrafted with care - We're all about quality. Our master seamstress, Rose, has been sewing for over fourty years
                   </v-list-item-content>
                 </v-list-item>
               </v-list>
