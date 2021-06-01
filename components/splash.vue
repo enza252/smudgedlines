@@ -1,5 +1,5 @@
 <template>
-  <v-parallax :src="imgPath">
+  <v-parallax :src="useParallax()" class="sl-parallax">
     <v-container>
       <v-row justify="center" align="center" class="d-flex flex-grow-1">
         <v-col>
@@ -16,7 +16,33 @@ import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'Splash',
   data: () => ({
-    imgPath: '/img/bg-acid-synth.png'
-  })
+    isHydrated: false,
+  }),
+  computed: {
+    xsMobile () {
+      return this.isHydrated && this.$vuetify.breakpoint.smAndDown
+    },
+    smAndUp () {
+      return this.isHydrated && this.$vuetify.breakpoint.mdAndUp
+    }
+  },
+  mounted () {
+    this.isHydrated = true
+  },
+  methods: {
+    useParallax () {
+      if (this.xsMobile) {
+        return '/designs/purple-haze/purple-haze-pattern-mobile-parallax.jpg'
+      } else {
+        return '/designs/purple-haze/purple-haze-pattern-1450-1088.jpg'
+      }
+    }
+  }
 })
 </script>
+<style>
+.sl-parallax {
+ border: 5px solid #1E1E1E;
+ border-radius: 5px;
+}
+</style>

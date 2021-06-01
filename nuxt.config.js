@@ -65,7 +65,7 @@ export default {
           black: '#000000',
         },
         dark: {
-          primary: '#387c6d',
+          primary: '#343f56',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -75,7 +75,7 @@ export default {
           light: '#f8f5f1',
           orange: '#e9896a',
           green: '#387c6d',
-          blue: '#343f56',
+          navy: '#343f56',
           white: '#ffffff',
           black: '#000000',
         }

@@ -20,9 +20,9 @@
           </v-col>
           <v-col>
             <v-card >
-              <v-card-title>Visit the Smudged Lines Store</v-card-title>
+              <v-card-title>Smudged Lines Store Coming Soon!</v-card-title>
               <v-card-text class="justify-center">
-                <v-img :src="slLogoColoured" height="80px" width="80px" class="mx-auto"/>
+                <v-img :src="slLogoColoured" height="80px" width="80px" class="mx-auto" disabled/>
               </v-card-text>
             </v-card>
           </v-col>

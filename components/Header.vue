@@ -2,7 +2,7 @@
   <v-container class="pa-0" fluid>
     <v-app-bar
       color="primary"
-      style="border-bottom: 1px solid #ffffff !important;"
+      style="border-bottom: 1px solid #1E1E1E !important;"
     >
       <v-app-bar-nav-icon>
         <template v-slot:default>
@@ -100,10 +100,10 @@ export default defineComponent({
     drawer: false
   }),
   computed: {
-    breakpoint () { // just an example, could be one specific value if that's all you need
+    breakpoint () {
       return this.isHydrated
         ? this.$vuetify.breakpoint.smAndDown
-        : undefined// "empty" $breakpoint object with initial values
+        : undefined
     }
   },
   mounted () {
