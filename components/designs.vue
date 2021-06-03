@@ -55,10 +55,6 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 import { designs } from '@/middleware/designs'
 
-// ToDo in here
-//  - lazy loaded version of each design to show some blurred image for UX
-//  - include new designs
-
 export default defineComponent({
   name: 'Designs',
   data () {
