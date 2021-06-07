@@ -11,14 +11,14 @@
               <template v-slot:activator="{ on, attrs }">
                 <a :href="social.url">
                   <v-icon  v-if="social.icon" v-on="on" v-bind="attrs" style="margin-bottom: 12px !important;" :class="social.classes">
-                    {{social.icon}}
+                    {{ social.icon }}
                   </v-icon>
 
                   <v-img v-else :src="social.img" height="22" width="22" v-on="on" v-bind="attrs" :class="social.classes"/>
 
                 </a>
               </template>
-              Visit our {{social.tooltipText}} Page
+              Visit our {{ social.tooltipText }} Page
             </v-tooltip>
 
           </template>

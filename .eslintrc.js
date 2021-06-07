@@ -40,10 +40,12 @@ module.exports = {
     'prefer-arrow-callback': 2,
     'no-var': 2,
     'comma-spacing': 2,
+    "comma-dangle": ["error", "never"],
     'vue/html-indent': ['error', 2, {
       'baseIndent': 1,
       'switchCase': 1,
       'ignores': []
     }],
+    "vue/mustache-interpolation-spacing": ["error", "never"]
   }
 }

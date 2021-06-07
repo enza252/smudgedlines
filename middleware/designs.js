@@ -10,8 +10,7 @@ export const sources = {
     },
     {
       image: '/designs/acid-synth/acid-synth-carousel-1450x1088-combined.jpg',
-      alt: 'Acid Synth T-Shirt with Model',
-      mobile: false
+      alt: 'Acid Synth T-Shirt with Model'
     }
   ],
   amoeba: [
@@ -22,8 +21,7 @@ export const sources = {
     },
     {
       image: '/designs/amoeba/amoeba-carousel-1450x1088-combined.jpg',
-      alt: 'Amoeba T-Shirt with Model',
-      mobile: false
+      alt: 'Amoeba T-Shirt with Model'
     }
   ],
   rose_fireworks: [
@@ -31,12 +29,10 @@ export const sources = {
       image: '/designs/rose-fireworks/rose-fireworks-carousel-1450x1088.jpg',
       alt: 'Rosé Fireworks Print',
       mobile: true
-
     },
     {
       image: '/designs/rose-fireworks/rose-fireworks-carousel-1450x1088-combined.jpg',
-      alt: 'Rosé Fireworks T-Shirt with Model',
-      mobile: false
+      alt: 'Rosé Fireworks T-Shirt with Model'
     }
   ],
   djibou: [
@@ -44,13 +40,10 @@ export const sources = {
       image: '/designs/djibou/djibou-carousel-1450x1088.jpg',
       alt: 'Djibou Print',
       mobile: true
-
     },
     {
       image: '/designs/djibou/djibou-carousel-1450x1088-combined-flipped.jpg',
-      alt: 'Djibou T-Shirt with Model',
-      mobile: false
-
+      alt: 'Djibou T-Shirt with Model'
     }
   ],
   connection: [
@@ -61,8 +54,7 @@ export const sources = {
     },
     {
       image: '/designs/connection/connection-carousel-1450x1088-combined.jpg',
-      alt: 'Connection T-Shirt with Model',
-      mobile: false
+      alt: 'Connection T-Shirt with Model'
     },
     {
       image: '/designs/connection/connection_carousel_1450x1088-hanging.jpg',
@@ -88,7 +80,7 @@ export const sources = {
       alt: 'Purple Haze T-Shirt with Model',
       mobile: true
     }
-  ],
+  ]
 }
 
 const fabricTypes = {
