@@ -34,7 +34,7 @@ export default defineComponent({
       if (this.xsMobile) {
         return '/designs/purple-haze/purple-haze-pattern-mobile-parallax.jpg'
       } else {
-        return '/designs/purple-haze/purple-haze-pattern-1450-1088.jpg'
+        return '/designs/purple-haze/purple-haze-pattern-tablet.jpg'
       }
     }
   }
