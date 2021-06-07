@@ -76,7 +76,8 @@
                 </v-list-item>
                 <v-list-item>
                   <v-list-item-content>
-                    We're currently listed on depop but feel free to message us on Instagram or mail@smudgedlines.co for direct orders via bank transfer.                  </v-list-item-content>
+                    We're currently listed on depop but feel free to message us on Instagram or&nbsp;<a href="mailto:mail@smudgedlines.co" style="flex: none !important; color: white !important">mail@smudgedlines.co</a>&nbsp;for direct orders via bank transfer.
+                  </v-list-item-content>
                 </v-list-item>
               </v-list>
 
