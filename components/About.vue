@@ -6,8 +6,83 @@
     <v-row>
       <v-sheet min-width="100%" color="accent" class="pa-6" rounded elevation="10">
         <v-row>
-          <v-col :cols="getColumns"><p>{{ fillerText }}</p></v-col>
-          <v-col :cols="getColumns"><p>{{ fillerText }}</p></v-col>
+          <v-col cols="12">
+            <h2>
+              Pleasure to meet you, we’re Smudged Lines!
+            </h2>
+            <br/>
+            <v-card rounded="10" elevation="6">
+
+              <v-list-item>
+                <v-list-item-content>
+                  <h4>
+                    Who are we:
+                  </h4>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list>
+                <v-list-item>
+                  <v-list-item-content>
+                    We're a new eco-friendly T-Shirt business that’s shaking up the world of fashion through bespoke clothing, that's designed to make you stand out.</v-list-item-content>
+                </v-list-item>
+
+                <v-list-item>
+                  <v-list-item-content>
+                    Run by Leicester local, Rose, a sewing expert who has been creating clothing for over 4 decades.
+                  </v-list-item-content>
+                </v-list-item>
+
+              </v-list>
+
+            </v-card>
+            <br/>
+            <v-card rounded elevation="6">
+
+              <v-list>
+                <v-list-item>
+                  <v-list-item-content>
+                    <h4>
+                      Our mission:
+                    </h4>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-content>
+                    Keeping it green - We’re taking steps towards our end-goal of becoming a zero-waste business. This is reflected through our packaging which is 100% plastic-free. We are also on the hunt for ways to make our manufacturing process more green and energy efficient.                  </v-list-item-content>
+                </v-list-item>
+
+                <v-list-item>
+                  <v-list-item-content>
+                    Supporting small – We’re all about small businesses (as one ourselves). So, we choose to source fabric from local manufacturers and vendors.                  </v-list-item-content>
+                </v-list-item>
+
+                <v-list-item>
+                  <v-list-item-content>
+                    Handcrafted with care - We're all about quality. Our master seamstress, Rose, has been sewing for over fourty years                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+
+            </v-card>
+            <br/>
+            <v-card rounded elevation="6">
+
+              <v-list>
+                <v-list-item>
+                  <v-list-item-content>
+                    <h4>
+                      Where to find us:
+                    </h4>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-content>
+                    We're currently listed on depop but feel free to message us on Instagram or&nbsp;<a href="mailto:mail@smudgedlines.co" style="flex: none !important; color: white !important">mail@smudgedlines.co</a>&nbsp;for direct orders via bank transfer.
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+
+            </v-card>
+          </v-col>
         </v-row>
       </v-sheet>
     </v-row>
@@ -17,21 +92,14 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  setup () {
-  },
   name: 'About',
-  data () {
-    return {
-      fillerText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper libero urna, vel accumsan enim ultricies in. Quisque augue purus, interdum nec lacinia vitae, pharetra at mi. Curabitur vitae condimentum dolor, non hendrerit neque. Aenean commodo cursus turpis vitae euismod. Duis eget tortor quis leo cursus sodales. Sed maximus neque est, id convallis quam semper non. Aliquam sit amet metus tempor, tincidunt diam sed, convallis ligula. Phasellus non ligula egestas, luctus lacus et, accumsan mauris. In hac habitasse platea dictumst. Donec malesuada ullamcorper fringilla. Suspendisse pharetra tempus facilisis. Nam ut scelerisque libero, vitae cursus odio. Phasellus lobortis vehicula maximus. Mauris lobortis in ligula accumsan egestas. Praesent ut magna sed ante dignissim mattis sit amet in ipsum.'
-    }
-  },
-  computed: {
-    mobile () {
-      return this.$vuetify.breakpoint.smAndDown
-    },
-    getColumns () {
-      return this.mobile ? '12' : '6'
-    }
-  }
 })
 </script>
+<style>
+.v-list-item__content {
+  font-size: 18px;
+}
+h4 {
+  font-size: 24px;
+}
+</style>

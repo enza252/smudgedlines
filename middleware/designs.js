@@ -5,7 +5,8 @@ export const sources = {
   acid_synth: [
     {
       image: '/designs/acid-synth/acid-synth-carousel-1450x1088.jpg',
-      alt: 'Acid Synth Print'
+      alt: 'Acid Synth Print',
+      mobile: true
     },
     {
       image: '/designs/acid-synth/acid-synth-carousel-1450x1088-combined.jpg',
@@ -15,7 +16,8 @@ export const sources = {
   amoeba: [
     {
       image: '/designs/amoeba/amoeba-carousel-1450x1088.jpg',
-      alt: 'Amoeba Print'
+      alt: 'Amoeba Print',
+      mobile: true
     },
     {
       image: '/designs/amoeba/amoeba-carousel-1450x1088-combined.jpg',
@@ -25,7 +27,8 @@ export const sources = {
   rose_fireworks: [
     {
       image: '/designs/rose-fireworks/rose-fireworks-carousel-1450x1088.jpg',
-      alt: 'Rosé Fireworks Print'
+      alt: 'Rosé Fireworks Print',
+      mobile: true
     },
     {
       image: '/designs/rose-fireworks/rose-fireworks-carousel-1450x1088-combined.jpg',
@@ -35,7 +38,8 @@ export const sources = {
   djibou: [
     {
       image: '/designs/djibou/djibou-carousel-1450x1088.jpg',
-      alt: 'Djibou Print'
+      alt: 'Djibou Print',
+      mobile: true
     },
     {
       image: '/designs/djibou/djibou-carousel-1450x1088-combined-flipped.jpg',
@@ -45,7 +49,8 @@ export const sources = {
   connection: [
     {
       image: '/designs/connection/connection-carousel-1450x1088.jpg',
-      alt: 'Connection Print'
+      alt: 'Connection Print',
+      mobile: true
     },
     {
       image: '/designs/connection/connection-carousel-1450x1088-combined.jpg',
@@ -53,17 +58,44 @@ export const sources = {
     },
     {
       image: '/designs/connection/connection_carousel_1450x1088-hanging.jpg',
-      alt: 'Connection T-Shirt with Model'
+      alt: 'Connection T-Shirt hanging on a rail',
+      mobile: true
     }
   ],
+  polka: [
+    {
+      image: '/designs/polka/polka-portrait.jpg',
+      alt: 'Polka T-Shirt with Model',
+      mobile: true
+    }
+  ],
+  purple_haze: [
+    {
+      image: '/designs/purple-haze/purple-haze-pattern-1450-1088.jpg',
+      alt: 'Purple Haze Print',
+      mobile: true
+    },
+    {
+      image: '/designs/purple-haze/purple-haze-tee-1450x1088.jpg',
+      alt: 'Purple Haze T-Shirt with Model',
+      mobile: true
+    }
+  ]
 }
+
+const fabricTypes = {
+  stretchJersey: 'Stretch Jersey',
+  polyEsterCotton: 'Cotton and Polyester Blend',
+  polyester: 'Polyester'
+}
+
 export const designs = [
   {
     name: 'Djibou',
     source: sources.djibou,
     productType: productTypes.mensTee,
     material: {
-      fabric: 'Stretch Jersey',
+      fabric: fabricTypes.polyester,
       source: 'Leicestershire'
     },
     produced: 'Winter 2020',
@@ -75,7 +107,7 @@ export const designs = [
     source: sources.rose_fireworks,
     productType: productTypes.mensTee,
     material: {
-      fabric: 'Stretch Jersey',
+      fabric: fabricTypes.polyester,
       source: 'Leicestershire'
     },
     produced: 'Winter 2020',
@@ -87,7 +119,7 @@ export const designs = [
     source: sources.connection,
     productType: productTypes.mensTee,
     material: {
-      fabric: 'Stretch Jersey',
+      fabric: fabricTypes.polyester,
       source: 'Leicestershire'
     },
     produced: 'Winter 2020',
@@ -111,24 +143,38 @@ export const designs = [
     source: sources.acid_synth,
     productType: productTypes.mensTee,
     material: {
-      fabric: 'Silky Stretch Jersey',
+      fabric: 'Cotton and Polyester blend',
       source: 'Leicestershire'
     },
     produced: 'Winter 2020',
     style: 'Acid Synth fractal pattern in green/black',
     icon: 'mdi-disc-alert'
   },
-  {
-    name: 'Polka',
-    icon: 'mdi-dots-hexagon'
-  },
-  {
-    name: 'Ink',
-    icon: 'mdi-water-percent'
-  },
+  // {
+  //   name: 'Polka',
+  //   icon: 'mdi-dots-hexagon',
+  //   source: sources.polka,
+  //   productType: productTypes.mensTee,
+  //   material: {
+  //     fabric: fabricTypes.polyester,
+  //     source: 'Leicestershire'
+  //   },
+  //   produced: 'Winter 2020',
+  // },
+  // {
+  //   name: 'Ink',
+  //   icon: 'mdi-water-percent'
+  // },
   {
     name: 'Purple Haze',
-    icon: 'mdi-cloud'
+    icon: 'mdi-cloud',
+    source: sources.purple_haze,
+    productType: productTypes.mensTee,
+    material: {
+      fabric: 'Cotton and Polyester blend',
+      source: 'Leicestershire'
+    },
+    style: 'Funky tie-die in purple/blue'
   }
 ]
 

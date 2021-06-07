@@ -52,38 +52,18 @@ export default {
     theme: {
       dark: true,
       themes: {
-        light: {
-          primary: '#3f51b5',
-          secondary: '#b0bec5',
-          accent: '#8c9eff',
-          error: '#b71c1c',
-          light: '#f8f5f1',
-          orange: '#e9896a',
-          green: '#387c6d',
-          blue: '#343f56',
-          white: '#ffffff',
-          black: '#000000',
-        },
         dark: {
-          primary: '#387c6d',
+          primary: '#343f56',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
           light: '#f8f5f1',
           orange: '#e9896a',
-          green: '#387c6d',
-          blue: '#343f56',
-          white: '#ffffff',
-          black: '#000000',
+          green: '#387c6d'
         }
       }
     }
-  },
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
   }
 }
