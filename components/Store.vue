@@ -8,19 +8,21 @@
         <v-row align="center">
           <v-col>
             <v-card>
-              <v-card-title>Find us on Depop</v-card-title>
+              <v-card-title :class="`${xsMobile() ? 'text-subtitle-2' : null}`">Find us on Depop</v-card-title>
               <v-card-text class="justify-center">
-
                 <a href="https://www.depop.com/smudgedlines/">
                   <v-img :src="depopSVG" max-width="300px" max-height="150px" class="mx-auto"/>
                 </a>
-
               </v-card-text>
             </v-card>
           </v-col>
           <v-col>
             <v-card >
-              <v-card-title>Smudged Lines Store Coming Soon!</v-card-title>
+              <template v-if="xsMobile()">
+                <v-card-title :class="text-subtitle-2">Smudged Lines Store</v-card-title>
+                <v-card-subtitle v-if="xsMobile()">Coming Soon!</v-card-subtitle>
+              </template>
+              <v-card-title v-else>Smudged Lines Store Coming Soon!</v-card-title>
               <v-card-text class="justify-center">
                 <v-img :src="slLogoColoured" height="80px" width="80px" class="mx-auto" disabled/>
               </v-card-text>
@@ -35,13 +37,19 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  setup () {
-
-  },
   data () {
     return {
       depopSVG: '/socials/depop_logo.svg',
-      slLogoColoured: '/logo/sl-colour-150x150.png'
+      slLogoColoured: '/logo/sl-colour-150x150.png',
+      isHydrated: false
+    }
+  },
+  mounted () {
+    this.isHydrated = true
+  },
+  methods: {
+    xsMobile () {
+      return this.isHydrated && this.$vuetify.breakpoint.xsOnly
     }
   }
 })
