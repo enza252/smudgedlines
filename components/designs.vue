@@ -28,6 +28,7 @@
           <v-tab-item
             v-for="(design, index) in designs"
             :key="index"
+            eager
           >
             <v-carousel
               cycle
