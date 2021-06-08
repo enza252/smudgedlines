@@ -19,8 +19,8 @@
           v-model="tab"
         >
           <template v-for="(design, index) in tabHeaders">
-            <v-tab :key="index">{{ design.name }}
-              <v-icon :key="index">{{ design.icon }}</v-icon>
+            <v-tab :key="index">{{design.name}}
+              <v-icon :key="index">{{design.icon}}</v-icon>
             </v-tab>
           </template>
         </v-tabs>
@@ -92,7 +92,7 @@ export default defineComponent({
   methods: {
     doRenderOnDevice (isImageMobileCompatible) {
       return isImageMobileCompatible || !(!isImageMobileCompatible && (this.mobile || this.xlMobile))
-    },
+    }
   }
 })
 </script>

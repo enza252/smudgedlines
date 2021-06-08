@@ -16,7 +16,7 @@ import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'Splash',
   data: () => ({
-    isHydrated: false,
+    isHydrated: false
   }),
   computed: {
     xsMobile () {
