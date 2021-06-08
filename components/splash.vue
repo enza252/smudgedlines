@@ -18,21 +18,15 @@ export default defineComponent({
   data: () => ({
     isHydrated: false
   }),
-  computed: {
-    xsMobile () {
-      return this.isHydrated && this.$vuetify.breakpoint.smAndDown
-    },
-    smAndUp () {
-      return this.isHydrated && this.$vuetify.breakpoint.mdAndUp
-    }
-  },
   mounted () {
     this.isHydrated = true
   },
   methods: {
     useParallax () {
-      if (this.xsMobile) {
+      if (this.isHydrated && this.$vuetify.breakpoint.smAndDown) {
         return '/designs/purple-haze/purple-haze-pattern-mobile-parallax.jpg'
+      } else if (this.isHydrated && this.$vuetify.breakpoint.lgAndUp) {
+        return '/designs/purple-haze/purple-haze-pattern-og.jpg'
       } else {
         return '/designs/purple-haze/purple-haze-pattern-tablet.jpg'
       }
