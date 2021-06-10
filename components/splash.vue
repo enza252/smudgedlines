@@ -23,10 +23,8 @@ export default defineComponent({
   },
   methods: {
     useParallax () {
-      if (this.isHydrated && this.$vuetify.breakpoint.xsOnly) {
+      if (this.isHydrated && this.$vuetify.breakpoint.smAndDown) {
         return '/designs/purple-haze/purple-haze-pattern-mobile-2-parallax.jpg'
-      } else if (this.isHydrated && this.$vuetify.breakpoint.lgAndUp) {
-        return '/designs/purple-haze/purple-haze-pattern-og.jpg'
       } else {
         return '/designs/purple-haze/purple-haze-pattern-tablet.jpg'
       }
