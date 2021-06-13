@@ -75,7 +75,7 @@
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item>
-                  <v-list-item-content style="display: inline-block !important"> 
+                  <v-list-item-content style="display: inline-block !important">
                     We're currently listed on depop but feel free to message us on Instagram or for direct orders via bank transfer, email us <a href="mailto:mail@smudgedlines.co" style="flex: none !important; color: white !important">mail@smudgedlines.co</a>.
                   </v-list-item-content>
                 </v-list-item>
@@ -91,7 +91,7 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  name: 'About',
+  name: 'About'
 })
 </script>
 <style>
