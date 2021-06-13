@@ -21,12 +21,12 @@
       <template v-if="!mobile()">
         <v-tooltip bottom v-for="(button, index) in navBarButtons" :key="index">
           <template v-slot:activator="{ on, attrs }">
-            <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="goToSection(button.id)">
-              {{ button.buttonText }}
-              <v-icon right >{{ button.icon }}</v-icon>
+            <v-btn color="white" class="ma-1" text v-on="on" v-bind="attrs" @click="goToSection(button.id)" :aria-labelledby="button.buttonText.toLowerCase() + '-nav-button'">
+              {{button.buttonText}}
+              <v-icon right >{{button.icon}}</v-icon>
             </v-btn>
           </template>
-          <span>{{ button.buttonText }}</span>
+          <span>{{button.buttonText}}</span>
         </v-tooltip>
       </template>
 
@@ -54,9 +54,9 @@
             <template v-for="(button, index) in navBarButtons">
               <v-list-item :key="index" @click="goToSection(button.id)">
                 <v-list-item-icon>
-                  <v-icon left >{{ button.icon }}</v-icon>
+                  <v-icon left >{{button.icon}}</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>{{ button.buttonText }}</v-list-item-title>
+                <v-list-item-title>{{button.buttonText}}</v-list-item-title>
               </v-list-item>
             </template>
           </v-list-item-group>
