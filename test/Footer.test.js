@@ -9,6 +9,11 @@ const options = {
 }
 
 describe('tests the footer renders correctly on large screens', () => {
+  beforeAll(() => {
+    const app = document.createElement('div')
+    app.setAttribute('data-app', 'true')
+    document.body.appendChild(app)
+  })
   it('Renders the Header and checks against a snapshot', async () => {
     const { asFragment } = await render(Footer, options)
     expect(asFragment).toMatchSnapshot()
