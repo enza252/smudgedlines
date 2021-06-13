@@ -30,8 +30,8 @@
             :key="index"
           >
             <v-carousel
-              cycle
               :height="getViewportHeight"
+              cycle
               hide-delimiter-background
               show-arrows-on-hover
             >
@@ -41,7 +41,12 @@
                   v-if="doRenderOnDevice(source.mobile)"
                   eager
                 >
-                  <v-img :src="source.image" height="100%" eager></v-img>
+                  <LoadingImage
+                    :src="source.image"
+                    :alt="source.alt"
+                    height="100%"
+                    eager
+                  />
                 </v-carousel-item>
               </template>
             </v-carousel>
@@ -68,14 +73,14 @@ export default defineComponent({
   },
   computed: {
     mobile () {
-      return this.isHydrated && this.$vuetify.breakpoint.xsAndDown
+      return this.isHydrated && this.$vuetify.breakpoint.xsOnly
     },
     xlMobile () {
       return this.isHydrated && this.$vuetify.breakpoint.mdAndDown
     },
     getViewportHeight () {
       if (this.isHydrated) {
-        if (this.$vuetify.breakpoint.xsAndDown) {
+        if (this.$vuetify.breakpoint.xsOnly) {
           return '450'
         }
         if (this.$vuetify.breakpoint.smAndUp) {

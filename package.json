@@ -37,6 +37,7 @@
     "vue": "^2.6.12",
     "vue-jest": "^3.0.4",
     "vue-loader": "^15.9.6",
+    "vue-spinner": "^1.0.4",
     "vuetify": "^2.4.9",
     "vuetify-loader": "^1.7.2"
   }
