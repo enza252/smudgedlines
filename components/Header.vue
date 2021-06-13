@@ -30,7 +30,7 @@
         </v-tooltip>
       </template>
 
-      <v-btn v-if="mobile()" @click="toggleDrawer" color="primary" elevation="false">
+      <v-btn v-if="mobile()" @click="toggleDrawer" color="primary" elevation="false" aria-labelledby="menu-bar-icon-button" data-testid="menu-bar-icon-button">
         <v-icon>
           mdi-menu
         </v-icon>
@@ -41,7 +41,8 @@
         v-model="drawer"
         absolute
         right
-        styile="z-index: 10 !important"
+        style="z-index: 10 !important"
+        data-testid="v-navigation-drawer"
       >
         <v-list
           nav
@@ -56,7 +57,7 @@
                 <v-list-item-icon>
                   <v-icon left >{{button.icon}}</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>{{button.buttonText}}</v-list-item-title>
+                <v-list-item-title :data-testid="button.buttonText.toLowerCase() + '-mobile-menu-button'">{{button.buttonText}}</v-list-item-title>
               </v-list-item>
             </template>
           </v-list-item-group>
