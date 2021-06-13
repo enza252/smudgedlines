@@ -3,10 +3,10 @@
     <v-container>
       <v-row>
         <h1 v-if="error.statusCode === 404">
-          {{ pageNotFound }}
+          {{pageNotFound}}
         </h1>
         <h1 v-else>
-          {{ otherError }}
+          {{otherError}}
         </h1>
       </v-row>
       <v-row>
