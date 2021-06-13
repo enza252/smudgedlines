@@ -19,7 +19,7 @@
           <v-col>
             <v-card >
               <template v-if="xsMobile()">
-                <v-card-title :class="text-subtitle-2">Smudged Lines Store</v-card-title>
+                <v-card-title class="text-subtitle-2">Smudged Lines Store</v-card-title>
                 <v-card-subtitle v-if="xsMobile()">Coming Soon!</v-card-subtitle>
               </template>
               <v-card-title v-else>Smudged Lines Store Coming Soon!</v-card-title>

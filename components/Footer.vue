@@ -10,15 +10,15 @@
             <v-tooltip top :key="index">
               <template v-slot:activator="{ on, attrs }">
                 <a :href="social.url">
-                  <v-icon  v-if="social.icon" v-on="on" v-bind="attrs" style="margin-bottom: 12px !important;" :class="social.classes">
+                  <v-icon  v-if="social.icon" v-on="on" v-bind="attrs" style="margin-bottom: 12px !important;" :class="social.classes" :data-testid="social.title.toLowerCase()">
                     {{social.icon}}
                   </v-icon>
 
-                  <v-img v-else :src="social.img" height="22" width="22" v-on="on" v-bind="attrs" :class="social.classes"/>
+                  <v-img v-else :src="social.img" height="22" width="22" v-on="on" v-bind="attrs" :class="social.classes" :data-testid="social.title.toLowerCase()"/>
 
                 </a>
               </template>
-              Visit our {{social.tooltipText}} Page
+              Visit our {{social.title}} Page
             </v-tooltip>
 
           </template>
@@ -40,23 +40,27 @@ import { mdiInstagram } from '@mdi/js'
 export default defineComponent({
   name: 'Footer',
   data: () => ({
+    isHydrated: false,
     socials: [{
       icon: mdiInstagram,
-      tooltipText: 'Instagram',
+      title: 'Instagram',
       url: 'https://www.instagram.com/smudgedlines/',
       classes: 'pr-2'
     },
     {
       img: '/socials/depop-logo-transparent.png',
-      tooltipText: 'Depop',
+      title: 'Depop',
       url: 'https://www.depop.com/smudgedlines/',
       classes: 'd-inline-flex flex-grow-1 align-end align-self-end align-content-end pl-2'
     }
     ]
   }),
+  mounted () {
+    this.isHydrated = true
+  },
   computed: {
     mobile () {
-      return this.$vuetify.breakpoint.smAndDown
+      return this.isHydrated && this.$vuetify.breakpoint.smAndDown
     }
   }
 })

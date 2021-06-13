@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/vue'
+import { render, screen, waitFor } from '@testing-library/vue'
+import userEvent from '@testing-library/user-event'
 import Footer from '@/components/Footer'
 import Vuetify from 'vuetify'
 
@@ -12,8 +13,19 @@ describe('tests the footer renders correctly', () => {
     const { asFragment } = await render(Footer, options)
     expect(asFragment).toMatchSnapshot()
   })
-  it('tests the icons are present within the component', async () => {
+  it('tests the text and icons are present within the component', async () => {
     await render(Footer, options)
     expect(screen.getByTestId('footer-text-right').textContent).toContain(`© ${new Date().getFullYear()} made with  by Smudged Lines`)
+    expect(screen.getByTestId('depop')).toBeInTheDocument()
+    expect(screen.getByTestId('instagram')).toBeInTheDocument()
+    await userEvent.hover(screen.getByTestId('depop'))
+    await waitFor(() => {
+      expect(screen.getByText('Visit our Depop Page')).toBeVisible()
+    })
+
+    await userEvent.hover(screen.getByTestId('instagram'))
+    await waitFor(() => {
+      expect(screen.getByText('Visit our Instagram Page')).toBeVisible()
+    })
   })
 })
