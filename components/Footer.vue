@@ -27,7 +27,7 @@
         <v-spacer/>
         <v-col :cols="mobile ? 7 : 6" style="text-align: end" class="pa-0">
           <span v-if="!mobile" data-testid="footer-text-right">&copy; {{new Date().getFullYear()}} made with <v-icon>mdi-heart</v-icon> by Smudged Lines</span>
-          <span v-else>&copy; {{new Date().getFullYear()}} Smudged Lines</span>
+          <span v-else data-testid="footer-text-right-mobile">&copy; {{new Date().getFullYear()}} Smudged Lines</span>
         </v-col>
       </v-row>
     </v-container>
