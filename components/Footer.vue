@@ -11,14 +11,14 @@
               <template v-slot:activator="{ on, attrs }">
                 <a :href="social.url">
                   <v-icon  v-if="social.icon" v-on="on" v-bind="attrs" style="margin-bottom: 12px !important;" :class="social.classes">
-                    {{ social.icon }}
+                    {{social.icon}}
                   </v-icon>
 
                   <v-img v-else :src="social.img" height="22" width="22" v-on="on" v-bind="attrs" :class="social.classes"/>
 
                 </a>
               </template>
-              Visit our {{ social.tooltipText }} Page
+              Visit our {{social.tooltipText}} Page
             </v-tooltip>
 
           </template>
@@ -26,8 +26,8 @@
         </v-col>
         <v-spacer/>
         <v-col :cols="mobile ? 7 : 6" style="text-align: end" class="pa-0">
-          <span v-if="!mobile">&copy; {{ new Date().getFullYear() }} made with <v-icon>mdi-heart</v-icon> by Smudged Lines</span>
-          <span v-else>&copy; {{ new Date().getFullYear() }} Smudged Lines</span>
+          <span v-if="!mobile" data-testid="footer-text-right">&copy; {{new Date().getFullYear()}} made with <v-icon>mdi-heart</v-icon> by Smudged Lines</span>
+          <span v-else>&copy; {{new Date().getFullYear()}} Smudged Lines</span>
         </v-col>
       </v-row>
     </v-container>

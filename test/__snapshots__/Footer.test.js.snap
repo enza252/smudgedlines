@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests the footer renders correctly Renders the Header and checks against a snapshot 1`] = `undefined`;
