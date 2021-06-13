@@ -28,7 +28,6 @@
           <v-tab-item
             v-for="(design, index) in designs"
             :key="index"
-            eager
           >
             <v-carousel
               cycle
@@ -39,9 +38,10 @@
               <template v-for="(source, i) in design.source">
                 <v-carousel-item
                   :key="i"
-                  :src="source.image"
                   v-if="doRenderOnDevice(source.mobile)"
+                  eager
                 >
+                  <v-img :src="source.image" height="100%" eager></v-img>
                 </v-carousel-item>
               </template>
             </v-carousel>
@@ -62,33 +62,39 @@ export default defineComponent({
     return {
       tab: null,
       tabHeaders: designs.map(design => ({ name: design.name, icon: design.icon })),
-      designs: designs
+      designs: designs,
+      isHydrated: false
     }
   },
   computed: {
     mobile () {
-      return this.$vuetify.breakpoint.xsAndDown
+      return this.isHydrated && this.$vuetify.breakpoint.xsAndDown
     },
     xlMobile () {
-      return this.$vuetify.breakpoint.mdAndDown
+      return this.isHydrated && this.$vuetify.breakpoint.mdAndDown
     },
     getViewportHeight () {
-      if (this.$vuetify.breakpoint.xsAndDown) {
-        return '450'
-      }
-      if (this.$vuetify.breakpoint.smAndUp) {
-        return '650'
-      }
-      if (this.$vuetify.breakpoint.mdAndUp) {
-        return '850'
-      }
-      if (this.$vuetify.breakpoint.lgAndUp) {
-        return '950'
-      }
-      if (this.$vuetify.breakpoint.xlAndUp) {
-        return '1150'
+      if (this.isHydrated) {
+        if (this.$vuetify.breakpoint.xsAndDown) {
+          return '450'
+        }
+        if (this.$vuetify.breakpoint.smAndUp) {
+          return '650'
+        }
+        if (this.$vuetify.breakpoint.mdAndUp) {
+          return '850'
+        }
+        if (this.$vuetify.breakpoint.lgAndUp) {
+          return '950'
+        }
+        if (this.$vuetify.breakpoint.xlAndUp) {
+          return '1150'
+        }
       }
     }
+  },
+  mounted () {
+    this.isHydrated = true
   },
   methods: {
     doRenderOnDevice (isImageMobileCompatible) {
